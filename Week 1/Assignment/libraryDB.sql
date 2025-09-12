@@ -26,14 +26,14 @@ CREATE TABLE borrowers (
     FOREIGN KEY (book_id) REFERENCES Books(book_id)
 );
 
-INSERT INTO Authors (author_name, country) VALUES
+INSERT INTO authors (author_name, country) VALUES
 ('Chetan Bhagat', 'India'),
 ('Ruskin Bond', 'India'),
 ('Amish Tripathi', 'India'),
 ('Arundhati Roy', 'India'),
 ('R.K. Narayan', 'India');
 
-INSERT INTO Books (title, author_id, publish_year, price) VALUES
+INSERT INTO books (title, author_id, publish_year, price) VALUES
 ('Five Point Someone', 1, 2004, 299.00),
 ('The Room on the Roof', 5, 1956, 199.00),
 ('The Shiva Trilogy', 3, 2010, 499.00),
@@ -41,7 +41,7 @@ INSERT INTO Books (title, author_id, publish_year, price) VALUES
 ('Our Trees Still Grow in Dehra', 2, 1991, 249.00);
 
 
-INSERT INTO Borrowers (book_id, borrower_name, borrow_date, return_date) VALUES
+INSERT INTO borrowers (book_id, borrower_name, borrow_date, return_date) VALUES
 (1, 'Rajesh Kumar', '2025-08-01', '2025-08-15'),
 (3, 'Sneha Sharma', '2025-08-05', NULL),
 (4, 'Anil Verma', '2025-08-10', '2025-08-20'),
@@ -55,9 +55,9 @@ SELECT
 	b.title, 
 	a.author_name
 FROM 
-	Books b
+	books b
 	INNER JOIN 
-	Authors a 
+	authors a 
 	ON 
 	b.author_id = a.author_id;
 
@@ -67,9 +67,9 @@ SELECT
 	a.author_name,
 	b.publish_year
 FROM 
-	Authors a
+	authors a
 	INNER JOIN 
-	Books b 
+	books b 
 	ON 
 	a.author_id = b.author_id
 WHERE 
@@ -141,7 +141,10 @@ ALTER TABLE borrowers
 ADD CONSTRAINT chk_return_date CHECK (return_date IS NULL OR return_date >= borrow_date);
 
 ALTER TABLE borrowers
-ADD CONSTRAINT chk_email CHECK (borrower_email LIKE '%@%.%');
+ADD CONSTRAINT chk_email CHECK (borrower_email LIKE '%@%.%'); 	-- % (Percent Sign): Matches any sequence of zero or more characters.
+																-- Example: WHERE name LIKE 'A%' finds all names starting with 'A'.
+																-- _ (Underscore): Matches exactly one single character.
+																-- Example: WHERE word LIKE 'h_t' finds 'hot', 'hat', and 'hit'.
 
 SELECT 
 	* 
@@ -189,9 +192,9 @@ SELECT
 	title,
 	publish_year,
 	CASE
-	WHEN publish_year < 1990 THEN 'Classic Era'
-	WHEN publish_year >= 1990 AND publish_year < 2010 THEN 'Modern Era'
-	ELSE 'Contemporary Era'
+		WHEN publish_year < 1990 THEN 'Classic Era'
+		WHEN publish_year >= 1990 AND publish_year < 2010 THEN 'Modern Era'
+		ELSE 'Contemporary Era'
 	END AS era
 FROM 
 	books;
