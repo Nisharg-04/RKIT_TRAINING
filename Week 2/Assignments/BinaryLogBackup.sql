@@ -10,8 +10,7 @@ INSERT INTO orders (customerid, tablenumber, status)
 VALUES (4, 8, 'Pending');
 
 INSERT INTO orderdetails (orderid, menuitemid, quantity, itempriceatorder) 
-VALUES (4, 2, 3, 70.00); -- 3 plates of Dhokla
-
+VALUES (4, 2, 3, 70.00); 
 UPDATE orders SET totalamount = 210.00 WHERE orderid = 4;
 
 DELETE FROM orders;
