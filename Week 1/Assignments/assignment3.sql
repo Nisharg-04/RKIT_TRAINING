@@ -8,7 +8,7 @@ INSERT INTO courses (course_name, duration) VALUES
 ('C++', '6 months');
 
 -- Insert into Students
-INSERT INTO Students (name, age, gender, course_id, email) VALUES
+INSERT INTO students (name, age, gender, course_id, email) VALUES
 ('Nisharg Soni', 21, 'Male', 1, 'nisharg@gmail.com'),
 ('Dakshil Gorasiya', 19, 'Male', 3, 'dakshil@gmail.com'),
 ('Diya Mehta', 22, 'Female', 2, 'diya@gmail.com'),
@@ -16,7 +16,7 @@ INSERT INTO Students (name, age, gender, course_id, email) VALUES
 ('Krisha Shah', 23, 'Female', 1, 'krisha@gmail.com');
 
 -- Insert into Marks
-INSERT INTO Marks (student_id, subject, score) VALUES
+INSERT INTO marks (student_id, subject, score) VALUES
 (1, 'DBMS', 88.5),
 (2, 'Python', 92.0),
 (3, 'OS', 85.0),
@@ -24,8 +24,8 @@ INSERT INTO Marks (student_id, subject, score) VALUES
 (5, 'DBMS', 91.5);
 
 -- 2. Update one student’s course.
-UPDATE Students SET course_id = 4 WHERE student_id = 2;
+UPDATE students SET course_id = 4 WHERE student_id = 2;
 
 -- 3. Delete a student record.
-DELETE FROM Students WHERE student_id = 4;
+DELETE FROM students WHERE student_id = 4;
 

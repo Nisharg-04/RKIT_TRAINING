@@ -5,7 +5,7 @@ ADD PRIMARY KEY
       
 ALTER TABLE
       courses
-MODIFY
+MODIFY COLUMN
       course_id INT AUTO_INCREMENT;
       
       

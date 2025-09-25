@@ -339,20 +339,18 @@ BEGIN
     DECLARE current_amount DECIMAL(10, 2);
     DECLARE total_sales DECIMAL(12, 2) DEFAULT 0.00;
 
-    -- 1. DECLARE Cursor
+  
     DECLARE sales_cursor CURSOR FOR
         SELECT totalamount FROM orders WHERE status = 'Completed';
 
     DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = TRUE;
 
-    -- 2. OPEN Cursor
     OPEN sales_cursor;
 
     read_loop: LOOP
-        -- 3. FETCH inside the LOOP
+      
         FETCH sales_cursor INTO current_amount;
 
-        -- Exit condition for the loop
         IF done THEN
             LEAVE read_loop;
         END IF;
@@ -360,7 +358,7 @@ BEGIN
         SET total_sales = total_sales + current_amount;
     END LOOP;
 
-    -- 4. CLOSE Cursor
+ 
     CLOSE sales_cursor;
     
     SELECT total_sales;
@@ -510,8 +508,6 @@ INSERT INTO orders (customerid, tablenumber, status) VALUES (1, 2, 'Pending');
 SELECT * FROM orders;
 
 
-
-
 -- AFTER INSERT Trigger for Audit Logging
 CREATE TABLE customer_audit (
     auditid INT AUTO_INCREMENT PRIMARY KEY,
@@ -585,6 +581,3 @@ CREATE INDEX idx_customerid ON orders(customerid);
 
 EXPLAIN SELECT * FROM orders WHERE customerid = 1;
 EXPLAIN FORMAT=JSON SELECT * FROM orders WHERE customerid = 1;
-
-
- 

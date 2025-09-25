@@ -53,6 +53,19 @@ END $$
 
 DELIMITER ;
 
+SELECT
+      s.student_id,
+      s.name,
+      m.score,
+      calculateGrade(m.score) AS grade
+FROM
+      students s
+INNER JOIN
+      marks m
+ON
+      s.student_id = m.student_id
+
+
 
 
 CREATE TABLE IF NOT EXISTS DeletedStudents (
@@ -65,17 +78,6 @@ CREATE TABLE IF NOT EXISTS DeletedStudents (
       deleted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-SELECT
-      s.student_id,
-      s.name,
-      m.score,
-      calculateGrade(m.score) AS grade
-FROM
-      students s
-INNER JOIN
-      marks m
-ON
-      s.student_id = m.student_id
 
 
 
