@@ -1,13 +1,13 @@
 Id,Title,Author,Condition
 1,Clean Code,Robert Martin,Good
 2,Domain-Driven Design,Eric Evans,Worn
-3,C# in Depth,Jon Skeet,New
+3,C# in Depth,Jon Skeet,Damaged
 4,The Pragmatic Programmer,Andrew Hunt,Good
 5,Design Patterns,Erich Gamma,Damaged
 1,Clean Code,Robert Martin,Worn
 6,Refactoring,Martin Fowler,New
 7,Code Complete,Steve McConnell,Good
-3,C# in Depth,Jon Skeet,Good
+3,C# in Depth,Jon Skeet,Damaged
 8,Structure and Interpretation of Computer Programs,Harold Abelson,Worn
 9,The Mythical Man-Month,Frederick Brooks,Damaged
 2,Domain-Driven Design,Eric Evans,Good
@@ -16,7 +16,7 @@ Id,Title,Author,Condition
 4,The Pragmatic Programmer,Andrew Hunt,Worn
 11,Introduction to Algorithms,Thomas H. Cormen,Good
 5,Design Patterns,Erich Gamma,Worn
-3,C# in Depth,Jon Skeet,Worn
+3,C# in Depth,Jon Skeet,Damaged
 12,The Art of Computer Programming,Donald Knuth,New
 7,Code Complete,Steve McConnell,Worn
 1,Clean Code,Robert Martin,New
@@ -41,7 +41,7 @@ Id,Title,Author,Condition
 13,Cracking the Coding Interview,Gayle Laakmann McDowell,Worn
 9,The Mythical Man-Month,Frederick Brooks,New
 5,Design Patterns,Erich Gamma,Good
-3,C# in Depth,Jon Skeet,Good
+3,C# in Depth,Jon Skeet,Damaged
 1,Clean Code,Robert Martin,Damaged
 12,The Art of Computer Programming,Donald Knuth,Good
 14,You Don't Know JS,Kyle Simpson,New

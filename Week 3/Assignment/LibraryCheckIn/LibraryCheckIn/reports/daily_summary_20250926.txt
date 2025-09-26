@@ -1,16 +1,16 @@
 Daily Library Returns Summary 
-Date/Time Processed: 2025-09-26 13.53.35
+Date/Time Processed: 2025-09-26 13.56.49
 Total Returns: 50
 
 Count by Condition:
-  New: 12
-  Good: 15
-  Worn: 14
-  Damaged: 9
+  New: 11
+  Good: 13
+  Worn: 13
+  Damaged: 13
 
 Top 5 Titles by Penalty:
+Id: 3 Title : Jon Skeet (Penalty: 50)
 Id: 1 Title : Robert Martin (Penalty: 26)
 Id: 2 Title : Eric Evans (Penalty: 16)
-Id: 3 Title : Jon Skeet (Penalty: 13)
 Id: 4 Title : Andrew Hunt (Penalty: 13)
 Id: 5 Title : Erich Gamma (Penalty: 13)
