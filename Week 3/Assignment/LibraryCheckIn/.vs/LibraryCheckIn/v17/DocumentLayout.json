@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\RKIT\\Github\\Week 3\\Assignment\\LibraryCheckIn\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{28041254-B10B-4D2C-B1D9-C3BE0DBA0E88}|LibraryCheckInIO\\LibraryCheckInIO.csproj|e:\\rkit\\github\\week 3\\assignment\\librarycheckin\\librarycheckinio\\csvparser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28041254-B10B-4D2C-B1D9-C3BE0DBA0E88}|LibraryCheckInIO\\LibraryCheckInIO.csproj|solutionrelative:librarycheckinio\\csvparser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48D5950A-7538-4B94-8682-7524C0784D2C}|LibraryCheckIn\\LibraryCheckIn.csproj|e:\\rkit\\github\\week 3\\assignment\\librarycheckin\\librarycheckin\\returns_20250926.csv||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{48D5950A-7538-4B94-8682-7524C0784D2C}|LibraryCheckIn\\LibraryCheckIn.csproj|solutionrelative:librarycheckin\\returns_20250926.csv||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48D5950A-7538-4B94-8682-7524C0784D2C}|LibraryCheckIn\\LibraryCheckIn.csproj|e:\\rkit\\github\\week 3\\assignment\\librarycheckin\\librarycheckin\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48D5950A-7538-4B94-8682-7524C0784D2C}|LibraryCheckIn\\LibraryCheckIn.csproj|solutionrelative:librarycheckin\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EB1DFC3-D25B-4952-9C4B-5AA3D999FAB7}|LibraryCheckInDomain\u0027\\LibraryCheckInDomain.csproj|e:\\rkit\\github\\week 3\\assignment\\librarycheckin\\librarycheckindomain\u0027\\dailysummary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EB1DFC3-D25B-4952-9C4B-5AA3D999FAB7}|LibraryCheckInDomain\u0027\\LibraryCheckInDomain.csproj|solutionrelative:librarycheckindomain\u0027\\dailysummary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EB1DFC3-D25B-4952-9C4B-5AA3D999FAB7}|LibraryCheckInDomain\u0027\\LibraryCheckInDomain.csproj|e:\\rkit\\github\\week 3\\assignment\\librarycheckin\\librarycheckindomain\u0027\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EB1DFC3-D25B-4952-9C4B-5AA3D999FAB7}|LibraryCheckInDomain\u0027\\LibraryCheckInDomain.csproj|solutionrelative:librarycheckindomain\u0027\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "returns_20250926.csv",
+              "DocumentMoniker": "E:\\RKIT\\Github\\Week 3\\Assignment\\LibraryCheckIn\\LibraryCheckIn\\returns_20250926.csv",
+              "RelativeDocumentMoniker": "LibraryCheckIn\\returns_20250926.csv",
+              "ToolTip": "E:\\RKIT\\Github\\Week 3\\Assignment\\LibraryCheckIn\\LibraryCheckIn\\returns_20250926.csv",
+              "RelativeToolTip": "LibraryCheckIn\\returns_20250926.csv",
+              "ViewState": "AgIAABwAAAAAAAAAAAAkwDIAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002120|",
+              "WhenOpened": "2025-09-26T07:40:05.945Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Book.cs",
+              "DocumentMoniker": "E:\\RKIT\\Github\\Week 3\\Assignment\\LibraryCheckIn\\LibraryCheckInDomain\u0027\\Book.cs",
+              "RelativeDocumentMoniker": "LibraryCheckInDomain\u0027\\Book.cs",
+              "ToolTip": "E:\\RKIT\\Github\\Week 3\\Assignment\\LibraryCheckIn\\LibraryCheckInDomain\u0027\\Book.cs",
+              "RelativeToolTip": "LibraryCheckInDomain\u0027\\Book.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T17:37:33.25Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CsvParser.cs",
+              "DocumentMoniker": "E:\\RKIT\\Github\\Week 3\\Assignment\\LibraryCheckIn\\LibraryCheckInIO\\CsvParser.cs",
+              "RelativeDocumentMoniker": "LibraryCheckInIO\\CsvParser.cs",
+              "ToolTip": "E:\\RKIT\\Github\\Week 3\\Assignment\\LibraryCheckIn\\LibraryCheckInIO\\CsvParser.cs",
+              "RelativeToolTip": "LibraryCheckInIO\\CsvParser.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAQwCUAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T17:23:45.279Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\RKIT\\Github\\Week 3\\Assignment\\LibraryCheckIn\\LibraryCheckIn\\Program.cs",
+              "RelativeDocumentMoniker": "LibraryCheckIn\\Program.cs",
+              "ToolTip": "E:\\RKIT\\Github\\Week 3\\Assignment\\LibraryCheckIn\\LibraryCheckIn\\Program.cs",
+              "RelativeToolTip": "LibraryCheckIn\\Program.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T17:23:34.446Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DailySummary.cs",
+              "DocumentMoniker": "E:\\RKIT\\Github\\Week 3\\Assignment\\LibraryCheckIn\\LibraryCheckInDomain\u0027\\DailySummary.cs",
+              "RelativeDocumentMoniker": "LibraryCheckInDomain\u0027\\DailySummary.cs",
+              "ToolTip": "E:\\RKIT\\Github\\Week 3\\Assignment\\LibraryCheckIn\\LibraryCheckInDomain\u0027\\DailySummary.cs",
+              "RelativeToolTip": "LibraryCheckInDomain\u0027\\DailySummary.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAA3wCgAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T16:58:39.13Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

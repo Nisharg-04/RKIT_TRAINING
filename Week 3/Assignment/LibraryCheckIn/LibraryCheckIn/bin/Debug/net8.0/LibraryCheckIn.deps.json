@@ -1,0 +1,56 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "LibraryCheckIn/1.0.0": {
+        "dependencies": {
+          "LibraryCheckInDomain": "1.0.0",
+          "LibraryCheckInIO": "1.0.0"
+        },
+        "runtime": {
+          "LibraryCheckIn.dll": {}
+        }
+      },
+      "LibraryCheckInDomain/1.0.0": {
+        "runtime": {
+          "LibraryCheckInDomain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "LibraryCheckInIO/1.0.0": {
+        "dependencies": {
+          "LibraryCheckInDomain": "1.0.0"
+        },
+        "runtime": {
+          "LibraryCheckInIO.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "LibraryCheckIn/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "LibraryCheckInDomain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "LibraryCheckInIO/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
