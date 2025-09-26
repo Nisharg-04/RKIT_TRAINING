@@ -21,7 +21,7 @@ namespace LibraryCheckIn
 
                
                 var summary = new DailySummary(books, DateTime.Now);
-                var outputPath = ReportGenerator.WriteDailySummary(summary);
+                var outputPath = ReportGenerator.WriteDailySummary(summary,"./reports");
 
                 Console.WriteLine($"Daily summary written to: {outputPath}");
                 Console.WriteLine();
