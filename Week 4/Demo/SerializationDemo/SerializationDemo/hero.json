@@ -1,0 +1,15 @@
+{
+  "Name": "Iron Man",
+  "SecretIdentity": "Tony Stark",
+  "Age": 48,
+  "HeroAddress": {
+    "Street": "10880 Malibu Point",
+    "City": "Malibu",
+    "ZipCode": "90265"
+  },
+  "Superpowers": [
+    "Genius-level intellect",
+    "Powered armor suit",
+    "Vast wealth"
+  ]
+}

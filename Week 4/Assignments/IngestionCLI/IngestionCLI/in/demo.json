@@ -1,0 +1,296 @@
+[
+  {
+    "Id": 1,
+    "Title": "Clean Code",
+    "Author": "Robert Martin",
+    "Condition": "Good"
+  },
+  {
+    "Id": 2,
+    "Title": "Domain-Driven Design",
+    "Author": "Eric Evans",
+    "Condition": "Worn"
+  },
+  {
+    "Id": 3,
+    "Title": "C# in Depth",
+    "Author": "Jon Skeet",
+    "Condition": "Damaged"
+  },
+  {
+    "Id": 4,
+    "Title": "The Pragmatic Programmer",
+    "Author": "Andrew Hunt",
+    "Condition": "Good"
+  },
+  {
+    "Id": 5,
+    "Title": "Design Patterns",
+    "Author": "Erich Gamma",
+    "Condition": "Damaged"
+  },
+  {
+    "Id": 1,
+    "Title": "Clean Code",
+    "Author": "Robert Martin",
+    "Condition": "Worn"
+  },
+  {
+    "Id": 6,
+    "Title": "Refactoring",
+    "Author": "Martin Fowler",
+    "Condition": "New"
+  },
+  {
+    "Id": 7,
+    "Title": "Code Complete",
+    "Author": "Steve McConnell",
+    "Condition": "Good"
+  },
+  {
+    "Id": 3,
+    "Title": "C# in Depth",
+    "Author": "Jon Skeet",
+    "Condition": "Damaged"
+  },
+  {
+    "Id": 8,
+    "Title": "Structure and Interpretation of Computer Programs",
+    "Author": "Harold Abelson",
+    "Condition": "Worn"
+  },
+  {
+    "Id": 9,
+    "Title": "The Mythical Man-Month",
+    "Author": "Frederick Brooks",
+    "Condition": "Damaged"
+  },
+  {
+    "Id": 2,
+    "Title": "Domain-Driven Design",
+    "Author": "Eric Evans",
+    "Condition": "Good"
+  },
+  {
+    "Id": 1,
+    "Title": "Clean Code",
+    "Author": "Robert Martin",
+    "Condition": "Damaged"
+  },
+  {
+    "Id": 10,
+    "Title": "Head First Design Patterns",
+    "Author": "Eric Freeman",
+    "Condition": "New"
+  },
+  {
+    "Id": 4,
+    "Title": "The Pragmatic Programmer",
+    "Author": "Andrew Hunt",
+    "Condition": "Worn"
+  },
+  {
+    "Id": 11,
+    "Title": "Introduction to Algorithms",
+    "Author": "Thomas H. Cormen",
+    "Condition": "Good"
+  },
+  {
+    "Id": 5,
+    "Title": "Design Patterns",
+    "Author": "Erich Gamma",
+    "Condition": "Worn"
+  },
+  {
+    "Id": 3,
+    "Title": "C# in Depth",
+    "Author": "Jon Skeet",
+    "Condition": "Damaged"
+  },
+  {
+    "Id": 12,
+    "Title": "The Art of Computer Programming",
+    "Author": "Donald Knuth",
+    "Condition": "New"
+  },
+  {
+    "Id": 7,
+    "Title": "Code Complete",
+    "Author": "Steve McConnell",
+    "Condition": "Worn"
+  },
+  {
+    "Id": 1,
+    "Title": "Clean Code",
+    "Author": "Robert Martin",
+    "Condition": "New"
+  },
+  {
+    "Id": 13,
+    "Title": "Cracking the Coding Interview",
+    "Author": "Gayle Laakmann McDowell",
+    "Condition": "Good"
+  },
+  {
+    "Id": 2,
+    "Title": "Domain-Driven Design",
+    "Author": "Eric Evans",
+    "Condition": "New"
+  },
+  {
+    "Id": 6,
+    "Title": "Refactoring",
+    "Author": "Martin Fowler",
+    "Condition": "Good"
+  },
+  {
+    "Id": 9,
+    "Title": "The Mythical Man-Month",
+    "Author": "Frederick Brooks",
+    "Condition": "Good"
+  },
+  {
+    "Id": 4,
+    "Title": "The Pragmatic Programmer",
+    "Author": "Andrew Hunt",
+    "Condition": "Damaged"
+  },
+  {
+    "Id": 1,
+    "Title": "Clean Code",
+    "Author": "Robert Martin",
+    "Condition": "Good"
+  },
+  {
+    "Id": 15,
+    "Title": "Eloquent JavaScript",
+    "Author": "Marijn Haverbeke",
+    "Condition": "New"
+  },
+  {
+    "Id": 5,
+    "Title": "Design Patterns",
+    "Author": "Erich Gamma",
+    "Condition": "New"
+  },
+  {
+    "Id": 3,
+    "Title": "C# in Depth",
+    "Author": "Jon Skeet",
+    "Condition": "Damaged"
+  },
+  {
+    "Id": 8,
+    "Title": "Structure and Interpretation of Computer Programs",
+    "Author": "Harold Abelson",
+    "Condition": "Good"
+  },
+  {
+    "Id": 10,
+    "Title": "Head First Design Patterns",
+    "Author": "Eric Freeman",
+    "Condition": "Worn"
+  },
+  {
+    "Id": 7,
+    "Title": "Code Complete",
+    "Author": "Steve McConnell",
+    "Condition": "Damaged"
+  },
+  {
+    "Id": 2,
+    "Title": "Domain-Driven Design",
+    "Author": "Eric Evans",
+    "Condition": "Worn"
+  },
+  {
+    "Id": 1,
+    "Title": "Clean Code",
+    "Author": "Robert Martin",
+    "Condition": "Worn"
+  },
+  {
+    "Id": 11,
+    "Title": "Introduction to Algorithms",
+    "Author": "Thomas H. Cormen",
+    "Condition": "Damaged"
+  },
+  {
+    "Id": 6,
+    "Title": "Refactoring",
+    "Author": "Martin Fowler",
+    "Condition": "Worn"
+  },
+  {
+    "Id": 4,
+    "Title": "The Pragmatic Programmer",
+    "Author": "Andrew Hunt",
+    "Condition": "New"
+  },
+  {
+    "Id": 13,
+    "Title": "Cracking the Coding Interview",
+    "Author": "Gayle Laakmann McDowell",
+    "Condition": "Worn"
+  },
+  {
+    "Id": 9,
+    "Title": "The Mythical Man-Month",
+    "Author": "Frederick Brooks",
+    "Condition": "New"
+  },
+  {
+    "Id": 5,
+    "Title": "Design Patterns",
+    "Author": "Erich Gamma",
+    "Condition": "Good"
+  },
+  {
+    "Id": 3,
+    "Title": "C# in Depth",
+    "Author": "Jon Skeet",
+    "Condition": "Damaged"
+  },
+  {
+    "Id": 1,
+    "Title": "Clean Code",
+    "Author": "Robert Martin",
+    "Condition": "Damaged"
+  },
+  {
+    "Id": 12,
+    "Title": "The Art of Computer Programming",
+    "Author": "Donald Knuth",
+    "Condition": "Good"
+  },
+  {
+    "Id": 14,
+    "Title": "You Don't Know JS",
+    "Author": "Kyle Simpson",
+    "Condition": "New"
+  },
+  {
+    "Id": 2,
+    "Title": "Domain-Driven Design",
+    "Author": "Eric Evans",
+    "Condition": "Damaged"
+  },
+  {
+    "Id": 15,
+    "Title": "Eloquent JavaScript",
+    "Author": "Marijn Haverbeke",
+    "Condition": "Worn"
+  },
+  {
+    "Id": 7,
+    "Title": "Code Complete",
+    "Author": "Steve McConnell",
+    "Condition": "New"
+  },
+  {
+    "Id": 10,
+    "Title": "Head First Design Patterns",
+    "Author": "Eric Freeman",
+    "Condition": "Good"
+  }
+]

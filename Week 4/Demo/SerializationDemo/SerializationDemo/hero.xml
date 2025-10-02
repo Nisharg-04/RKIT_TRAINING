@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-16"?>
+<SuperHero xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Iron Man</Name>
+  <SecretIdentity>Tony Stark</SecretIdentity>
+  <Age>48</Age>
+  <HeroAddress>
+    <Street>10880 Malibu Point</Street>
+    <City>Malibu</City>
+    <ZipCode>90265</ZipCode>
+  </HeroAddress>
+  <Superpowers>
+    <string>Genius-level intellect</string>
+    <string>Powered armor suit</string>
+    <string>Vast wealth</string>
+  </Superpowers>
+</SuperHero>
