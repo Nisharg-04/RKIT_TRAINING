@@ -14,7 +14,7 @@ namespace OOPTypesAndKeywordsDemo
         }
     }
 
-    // class Derived : FinalClass {} //  Error: cannot inherit sealed class
+    // class Derived : FinalClass {} // cannot inherit sealed class
 
 
 

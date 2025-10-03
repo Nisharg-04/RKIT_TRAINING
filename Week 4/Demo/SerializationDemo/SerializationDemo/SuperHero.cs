@@ -7,7 +7,7 @@ namespace SerializationDemo
         public string Name { get; set; }
         public string SecretIdentity { get; set; }
         public int Age { get; set; }
-        public Address HeroAddress { get; set; } // Nested object
-        public List<string> Superpowers { get; set; } // A collection
+        public Address HeroAddress { get; set; } // nested object
+        public List<string> Superpowers { get; set; } // collection
     }
 }

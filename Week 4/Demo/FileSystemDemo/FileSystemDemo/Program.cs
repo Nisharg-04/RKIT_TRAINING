@@ -6,7 +6,7 @@
         {
             string path = "example.txt";
 
-            //FileProperties.ShowFileProperties(path);
+        
             //FileMethods.ShowFileMethods(path);
 
             //FileInfoProperties.ShowFileInfoProperties(path);
@@ -16,7 +16,7 @@
             StreamReaderMethods.ShowStreamReaderMethods(path);
 
             path = @"C:\Temp";  
-            //DirectoryProperties.ShowDirectoryProperties(path);
+
             //DirectoryMethods.ShowDirectoryMethods(path);
 
             //DirectoryInfoProperties.ShowDirectoryInfoProperties(path);

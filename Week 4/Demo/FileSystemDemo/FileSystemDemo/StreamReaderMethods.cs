@@ -30,7 +30,7 @@ namespace FileSystemDemo
                 Console.WriteLine($"Read {readCount} characters: {new string(buffer, 0, readCount)}");
 
                 // ReadLine
-                reader.DiscardBufferedData(); // Reset for demonstration
+                reader.DiscardBufferedData(); // Reset 
                 reader.BaseStream.Seek(0, SeekOrigin.Begin);
                 string line = reader.ReadLine() ?? "";
                 Console.WriteLine($"ReadLine: {line}");

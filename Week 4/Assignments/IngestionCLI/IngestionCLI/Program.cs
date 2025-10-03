@@ -84,7 +84,7 @@ namespace IngestionCLI
                 Console.WriteLine("Generated full_report.txt and full_report.xml");
 
 
-                var topBooks = allBooks.TopBy(b => b.Title, 5);
+                var topBooks = allBooks.TopBy(b => b.Id, 5);
 
                 var summary = new SummaryReport
                 {

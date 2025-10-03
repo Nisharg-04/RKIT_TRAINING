@@ -74,7 +74,7 @@ namespace GenericCollectionsDemo
             var array = _list.ToArray();
             Console.WriteLine("ToArray(): " + string.Join(", ", array));
 
-            _list.TrimExcess();
+    
 
         }
     }
