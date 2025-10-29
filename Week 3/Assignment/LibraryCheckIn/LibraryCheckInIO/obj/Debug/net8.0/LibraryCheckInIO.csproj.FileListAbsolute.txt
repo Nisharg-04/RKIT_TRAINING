@@ -1,0 +1,16 @@
+E:\RKIT\Github\Week 3\Assignment\LibraryCheckIn\LibraryCheckInIO\obj\Debug\net8.0\LibraryCheckInIO.csproj.AssemblyReference.cache
+E:\RKIT\Github\Week 3\Assignment\LibraryCheckIn\LibraryCheckInIO\obj\Debug\net8.0\LibraryCheckInIO.GeneratedMSBuildEditorConfig.editorconfig
+E:\RKIT\Github\Week 3\Assignment\LibraryCheckIn\LibraryCheckInIO\obj\Debug\net8.0\LibraryCheckInIO.AssemblyInfoInputs.cache
+E:\RKIT\Github\Week 3\Assignment\LibraryCheckIn\LibraryCheckInIO\obj\Debug\net8.0\LibraryCheckInIO.AssemblyInfo.cs
+E:\RKIT\Github\Week 3\Assignment\LibraryCheckIn\LibraryCheckInIO\obj\Debug\net8.0\LibraryCheckInIO.csproj.CoreCompileInputs.cache
+E:\RKIT\Github\Week 3\Assignment\LibraryCheckIn\LibraryCheckInIO\obj\Debug\net8.0\LibraryCheckInIO.sourcelink.json
+E:\RKIT\Github\Week 3\Assignment\LibraryCheckIn\LibraryCheckInIO\bin\Debug\net8.0\LibraryCheckInIO.deps.json
+E:\RKIT\Github\Week 3\Assignment\LibraryCheckIn\LibraryCheckInIO\bin\Debug\net8.0\LibraryCheckInIO.dll
+E:\RKIT\Github\Week 3\Assignment\LibraryCheckIn\LibraryCheckInIO\bin\Debug\net8.0\LibraryCheckInIO.pdb
+E:\RKIT\Github\Week 3\Assignment\LibraryCheckIn\LibraryCheckInIO\bin\Debug\net8.0\LibraryCheckInDomain.dll
+E:\RKIT\Github\Week 3\Assignment\LibraryCheckIn\LibraryCheckInIO\bin\Debug\net8.0\LibraryCheckInDomain.pdb
+E:\RKIT\Github\Week 3\Assignment\LibraryCheckIn\LibraryCheckInIO\obj\Debug\net8.0\LibraryC.990A6EF1.Up2Date
+E:\RKIT\Github\Week 3\Assignment\LibraryCheckIn\LibraryCheckInIO\obj\Debug\net8.0\LibraryCheckInIO.dll
+E:\RKIT\Github\Week 3\Assignment\LibraryCheckIn\LibraryCheckInIO\obj\Debug\net8.0\refint\LibraryCheckInIO.dll
+E:\RKIT\Github\Week 3\Assignment\LibraryCheckIn\LibraryCheckInIO\obj\Debug\net8.0\LibraryCheckInIO.pdb
+E:\RKIT\Github\Week 3\Assignment\LibraryCheckIn\LibraryCheckInIO\obj\Debug\net8.0\ref\LibraryCheckInIO.dll
