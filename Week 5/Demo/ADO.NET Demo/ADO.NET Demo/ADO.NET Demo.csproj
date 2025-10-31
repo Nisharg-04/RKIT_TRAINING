@@ -6,7 +6,7 @@
     <RootNamespace>ADO.NET_Demo</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>ADO_NET_DisconnectedDemo.ConnectionLess</StartupObject>
+    <StartupObject>ADO.NET_Demo.Program</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
