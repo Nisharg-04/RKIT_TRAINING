@@ -11,8 +11,8 @@ using Reading_Room.Data;
 namespace Reading_Room.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20251029072403_firstmigration")]
-    partial class firstmigration
+    [Migration("20251031080123_initialcreate3")]
+    partial class initialcreate3
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

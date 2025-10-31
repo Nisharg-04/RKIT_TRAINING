@@ -11,8 +11,8 @@ using Reading_Room.Data;
 namespace Reading_Room.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20251029072240_first")]
-    partial class first
+    [Migration("20251031080009_initialcreate2")]
+    partial class initialcreate2
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -47,26 +47,6 @@ namespace Reading_Room.Migrations
                     b.HasIndex("RoomId", "Start", "End");
 
                     b.ToTable("Reservations");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            End = new DateTime(2025, 10, 27, 9, 22, 38, 362, DateTimeKind.Utc).AddTicks(187),
-                            PatronName = "Alice",
-                            RoomId = 1,
-                            Start = new DateTime(2025, 10, 27, 7, 22, 38, 361, DateTimeKind.Utc).AddTicks(9799),
-                            Status = 1
-                        },
-                        new
-                        {
-                            Id = 2,
-                            End = new DateTime(2025, 10, 28, 10, 22, 38, 362, DateTimeKind.Utc).AddTicks(532),
-                            PatronName = "Bob",
-                            RoomId = 1,
-                            Start = new DateTime(2025, 10, 28, 7, 22, 38, 362, DateTimeKind.Utc).AddTicks(530),
-                            Status = 1
-                        });
                 });
 
             modelBuilder.Entity("Reading_Room.Models.Room", b =>

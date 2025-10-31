@@ -5,7 +5,7 @@
 namespace Reading_Room.Migrations
 {
     /// <inheritdoc />
-    public partial class updated : Migration
+    public partial class initialcreate1 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

@@ -10,7 +10,7 @@
             public static async Task SeedAsync(AppDbContext context)
             {
                 // apply pending migrations if any
-                await context.Database.MigrateAsync();
+                //await context.Database.MigrateAsync();
 
                 // Seed Rooms if none exist
                 if (!context.Rooms.Any())
@@ -40,6 +40,14 @@
                         PatronName = "Alice",
                         Start = DateTime.Today.AddHours(9),
                         End = DateTime.Today.AddHours(11),
+                        Status = ReservationStatus.Confirmed
+                    },
+                            new Reservation
+                    {
+                        RoomId = rooms[0].Id,
+                        PatronName = "Conflict Alice",
+                        Start = DateTime.Today.AddHours(10),
+                        End = DateTime.Today.AddHours(14),
                         Status = ReservationStatus.Confirmed
                     },
                     new Reservation

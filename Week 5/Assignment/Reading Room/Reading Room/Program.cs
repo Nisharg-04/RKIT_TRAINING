@@ -13,8 +13,8 @@ namespace Reading_Room
         public static async Task Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-            var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ??
-                       "Data Source=D:\\Nisharg\\RKIT_TRAINING\\Week 5\\Assignment\\Reading Room\\Reading Room\\readingroom.db";
+            var connectionString = 
+                       "Data Source=D:\\RKIT\\Github\\Week 5\\Assignment\\Reading Room\\Reading Room\\readingroom.db";
 
 
             builder.Services.AddDbContext<AppDbContext>(opts =>
@@ -118,6 +118,12 @@ namespace Reading_Room
             {
                 var data = await svc.TopNBusiestRoomsAsync(from, to, top);
                 return Results.Ok(data.Select(d => new { d.RoomId, d.RoomName, BusyHours = d.BusyTime.TotalHours }));
+            });
+
+            app.MapGet("/analytics/conflicts", async (IReservationService svc) =>
+            {
+                var list = await svc.FindConflictingReservationsAsync();
+                return Results.Ok(list.Select(c => new { c.RoomId, c.RoomName, c.Patron1, c.Patron2 }));
             });
 
             app.MapGet("/analytics/utilization", async (DateTime from, DateTime to, IReservationService svc) =>

@@ -88,7 +88,29 @@ namespace Reading_Room.Services
             return grouped;
         }
 
-     
+
+        public async Task<List<(int RoomId, string RoomName, string Patron1, string Patron2)>> FindConflictingReservationsAsync()
+        {
+            var query =
+       from a in _db.Reservations
+       from b in _db.Reservations
+       where
+           a.Id < b.Id &&                 // avoid duplicates
+           a.RoomId == b.RoomId &&        // same room
+           a.Status != ReservationStatus.Cancelled &&
+           b.Status != ReservationStatus.Cancelled &&
+           a.Start < b.End && b.Start < a.End  // overlap
+       select new
+       {
+           a.RoomId,
+           RoomName = a.Room.Name,
+           Patron1 = a.PatronName,
+           Patron2 = b.PatronName
+       };
+
+            var results = await query.ToListAsync();
+            return results.Select(r => (r.RoomId, r.RoomName, r.Patron1, r.Patron2)).ToList();
+        }
 
         public async Task<Dictionary<int, double>> UtilizationPercentPerRoomAsync(DateTime from, DateTime to)
         {
