@@ -3,44 +3,43 @@
 namespace Reading_Room.Models
 {
     /// <summary>
-    /// A class representing a reservation for a room in the reading room application.
+    /// This class stores details about a room reservation in the reading room.
     /// </summary>
     public class Reservation
     {
         /// <summary>
-        /// A unique identifier for the reservation.
+        /// Unique ID for each reservation.
         /// </summary>
         public int Id { get; set; }
 
         /// <summary>
-        /// A foreign key referencing the associated Room entity.
+        /// ID of the room that is booked.
         /// </summary>
         public int RoomId { get; set; }
 
         /// <summary>
-        /// A navigation property to the associated Room entity.
+        /// The room linked to this reservation.
         /// </summary>
-
         [ForeignKey("RoomId")]
         public Room? Room { get; set; }
 
         /// <summary>
-        /// Name of the patron who made the reservation.
+        /// Name of the person who booked the room.
         /// </summary>
         public string PatronName { get; set; }
 
         /// <summary>
-        /// From when the reservation starts.
+        /// Date and time when the booking starts.
         /// </summary>
         public DateTime Start { get; set; }
 
         /// <summary>
-        /// To when the reservation ends.
+        /// Date and time when the booking ends.
         /// </summary>
         public DateTime End { get; set; }
 
         /// <summary>
-        /// Status of the reservation.
+        /// Current status of the booking (for example, Pending, Approved, or Cancelled).
         /// </summary>
         public ReservationStatus Status { get; set; }
     }

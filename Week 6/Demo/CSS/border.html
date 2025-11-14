@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border Family Demo</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            text-decoration: underline;
+        }
+
+        .example {
+            margin: 20px;
+            padding: 15px;
+            background-color: white;
+        }
+
+        .solid {
+            border: 3px solid #000;
+        }
+
+        .dotted {
+            border: 3px dotted #0077b6;
+        }
+
+        .dashed {
+            border: 3px dashed #ff5733;
+        }
+
+        .double {
+            border: 5px double #2a9d8f;
+        }
+
+        .groove {
+            border: 5px groove #6a4c93;
+        }
+
+        .ridge {
+            border: 5px ridge #f4a261;
+        }
+
+        .inset {
+            border: 5px inset #e76f51;
+        }
+
+        .outset {
+            border: 5px outset #264653;
+        }
+
+
+        .width-color {
+            border-style: solid;
+            border-width: 5px;
+            border-color: red green blue yellow;
+
+        }
+
+
+        .rounded {
+            border: 3px solid #000;
+            border-radius: 20px;
+        }
+
+
+        .individual {
+            border-top: 5px solid red;
+            border-right: 5px dotted green;
+            border-bottom: 5px dashed blue;
+            border-left: 5px double purple;
+        }
+
+
+
+
+        .circle {
+            width: 150px;
+            height: 150px;
+            border: 5px solid #008000;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 150px;
+            margin: auto;
+            background-color: #e6ffe6;
+        }
+
+
+        .mixed {
+            border-style: dotted dashed solid double;
+            border-width: 4px;
+            border-color: red green blue purple;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="example solid">Solid Border</div>
+    <div class="example dotted">Dotted Border</div>
+    <div class="example dashed">Dashed Border</div>
+    <div class="example double">Double Border</div>
+    <div class="example groove">Groove Border</div>
+    <div class="example ridge">Ridge Border</div>
+    <div class="example inset">Inset Border</div>
+    <div class="example outset">Outset Border</div>
+
+    <div class="example width-color">
+        Border Width and Multi-Color Example<br>
+        (Top = Red, Right = Green, Bottom = Blue, Left = Yellow)
+    </div>
+
+    <div class="example rounded">
+        Rounded Border using <code>border-radius</code>
+    </div>
+
+    <div class="example individual">
+        Individual Borders (Top/Right/Bottom/Left)
+    </div>
+
+    <div class="example shorthand">
+        Shorthand Border Property Example (4px solid orange)
+    </div>
+
+    <div class="example mixed">
+        Mixed Border Styles (Different for each side)
+    </div>
+
+    <div class="circle">
+        Circular Border
+    </div>
+
+</body>
+
+</html>

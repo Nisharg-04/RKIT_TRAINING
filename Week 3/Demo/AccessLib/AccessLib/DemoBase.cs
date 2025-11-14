@@ -22,13 +22,13 @@
         }
     }
 
-    // 🔸 Internal class – accessible only inside this assembly
+    //  Internal class – accessible only inside this assembly
     internal class InternalDemo
     {
         public string Info = "Internal Class Field";
     }
 
-    // 🔸 Derived class to test inheritance
+    //  Derived class to test inheritance
     public class DerivedDemo : DemoBase
     {
         public void ShowInherited()

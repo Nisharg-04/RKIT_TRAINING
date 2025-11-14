@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positioning Demo</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+
+        h1 {
+            text-align: center;
+            text-decoration: underline;
+        }
+
+        .container {
+            position: relative;
+            border: 2px solid #000;
+            height: 400px;
+            margin-top: 40px;
+            background-color: #f5f5f5;
+        }
+
+
+        .box {
+            width: 120px;
+            height: 120px;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            line-height: 120px;
+            border-radius: 8px;
+        }
+
+
+        .static {
+            background-color: #6a5acd;
+            position: static;
+            /* Default position */
+        }
+
+
+        .relative {
+            background-color: #20b2aa;
+            position: relative;
+            top: 20px;
+            left: 40px;
+        }
+
+
+        .absolute {
+            background-color: #ff6347;
+            position: absolute;
+            top: 60px;
+            right: 40px;
+        }
+
+
+        .fixed {
+            background-color: #ffa500;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+        }
+
+
+        .sticky {
+            background-color: #008000;
+            position: sticky;
+            top: 0;
+        }
+
+        p {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="box sticky">Sticky</div>
+
+    <div class="container">
+        <div class="box static">Static</div>
+        <div class="box relative">Relative</div>
+        <div class="box absolute">Absolute</div>
+    </div>
+
+    <p>Scroll down the page to observe how the <b>fixed</b> box stays in place.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet lacinia libero. Sed imperdiet,
+        urna eu placerat porta, nibh magna fermentum magna, et vehicula metus elit nec eros. Cras accumsan mi et orci
+        accumsan, sed facilisis erat feugiat. Nunc ultricies enim in odio tincidunt, vel consequat mi tincidunt.
+        Suspendisse venenatis nunc vel urna laoreet tempus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus facilisis tortor vitae massa tincidunt, eget
+        condimentum metus convallis. Proin eget justo neque. Donec in sapien non arcu posuere faucibus. Donec at orci
+        augue. Sed vitae sapien sem. Mauris consequat justo at mauris viverra, vel egestas est feugiat.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt nibh eget lacinia viverra.
+        Integer porta, nulla vel cursus tincidunt, mi neque pulvinar sem, et venenatis nisl erat id leo.</p>
+
+    >
+    <div class="box fixed">Fixed</div>
+
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries - Mobile First Demo</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f7f7f7;
+        }
+
+        header {
+            background-color: #0074D9;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+        }
+
+        .box {
+            background-color: #2ECC40;
+            color: white;
+            margin: 5px 0;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #111;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+
+
+
+        @media (min-width: 600px) {
+            .container {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-around;
+            }
+
+            .box {
+                flex: 1 1 0;
+                margin: 10px;
+            }
+
+            header {
+                background-color: #FF851B;
+            }
+        }
+
+
+        @media (min-width: 900px) {
+            .container {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .box {
+                flex: 1 1 0;
+                margin: 15px;
+                font-size: 18px;
+            }
+
+            header {
+                background-color: #B10DC9;
+            }
+
+            footer {
+                background-color: #333;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Responsive Layout using Media Queries</h1>
+    </header>
+
+    <div class="container">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+    </div>
+
+    <footer>
+        <p>Resize the browser to see the layout change!</p>
+    </footer>
+
+</body>
+
+</html>

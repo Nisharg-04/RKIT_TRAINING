@@ -62,7 +62,7 @@ namespace Secure_Notes_Vault.VaultServices
             {
               
                 string checkData = File.ReadAllText(_checkPath);
-                _cryptoService.Decrypt(checkData, _derivedKey); 
+                _cryptoService.Decrypt(checkData, _derivedKey); // throws cyrptographic exception if wrong
             }
             else
             {

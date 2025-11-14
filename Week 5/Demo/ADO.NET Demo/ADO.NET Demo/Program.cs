@@ -7,7 +7,7 @@ namespace ADO.NET_Demo
     {
         static void Main(string[] args)
         {
-            string connectionString = "Server=localhost;Database=minipayrolldb;User ID=root;Password=nisharg2004;";
+            string connectionString = "Server=localhost;Database=minipayrolldb;User ID=root;Password=****;";
 
      
             using MySqlConnection conn = new MySqlConnection(connectionString);

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables Demo</title>
+
+    <style>
+        :root {
+            --main-bg-color: #f0f8ff;
+            --main-text-color: #333;
+            --highlight-color: #0074D9;
+            --box-padding: 15px;
+            --border-radius: 10px;
+        }
+
+        body {
+            background-color: var(--main-bg-color);
+            color: var(--main-text-color);
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+
+        h1 {
+            color: var(--highlight-color);
+            text-align: center;
+        }
+
+        .box {
+            border: 2px solid var(--highlight-color);
+            padding: var(--box-padding);
+            border-radius: var(--border-radius);
+            margin: 15px 0;
+        }
+
+        button {
+            background-color: var(--highlight-color);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: darkblue;
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <div class="box">
+        <p>This box uses the global variables for <b>border color</b>, <b>padding</b>, and <b>border-radius</b>.</p>
+    </div>
+
+    <button>Click Me</button>
+
+</body>
+
+</html>

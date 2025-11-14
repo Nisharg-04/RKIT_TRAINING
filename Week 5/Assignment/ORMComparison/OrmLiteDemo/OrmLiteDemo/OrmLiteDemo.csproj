@@ -8,8 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-  
-    <ProjectReference Include="..\IngestionPipeline\IngestionPipeline.csproj" />
+    <PackageReference Include="ServiceStack.OrmLite" Version="8.9.0" />
+    <PackageReference Include="ServiceStack.OrmLite.MySql" Version="8.9.0" />
   </ItemGroup>
 
 </Project>

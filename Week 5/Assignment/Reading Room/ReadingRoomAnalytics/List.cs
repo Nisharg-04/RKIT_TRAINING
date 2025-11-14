@@ -13,8 +13,14 @@ namespace ReadingRoomAnalytics
     {
         public static async Task listDemo(AppDbContext db)
         {
-            DateTime from = DateTime.Today.AddHours(8);
-            DateTime to = DateTime.Today.AddHours(16);
+
+            DateTime from; 
+            DateTime.TryParse("2025-10-31 00:00:00", out from);
+            from =from.AddHours(8);
+            DateTime to;
+            DateTime.TryParse("2025-10-31 00:00:00", out to);
+            to=to.AddHours(16);
+            Console.WriteLine($"Analyzing reservations from {from} to {to}\n");
             var list = await db.Reservations
                 .Include(r => r.Room)
                 .Where(r => r.End > from && r.Start < to && r.Status != ReservationStatus.Cancelled)

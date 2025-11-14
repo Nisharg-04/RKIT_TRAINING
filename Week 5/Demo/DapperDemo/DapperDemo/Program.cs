@@ -20,10 +20,10 @@ namespace DapperDemo
             // For JOIN result
             public Department Department { get; set; }
         }
-        static string connectionString = "Server=localhost;Database=companydb;User Id=root;Password=nisharg2004;";
+        static string connectionString = "Server=localhost;Database=companydb;User Id=root;Password=****;";
         static void Main(string[] args)
         {
-            using(var connection = new MySqlConnection(connectionString))
+            using (var connection = new MySqlConnection(connectionString))
             {
                 connection.Open();
                 using (var tran = connection.BeginTransaction())
@@ -52,7 +52,7 @@ namespace DapperDemo
                 var departments = connection.Query<Department>("SELECT * FROM Department").ToList();
                 foreach (var d in departments)
                     Console.WriteLine($"{d.Id}: {d.Name}");
-                 departments = connection.Query<Department>("SELECT * FROM Department WHERE Id = 1").ToList();
+                departments = connection.Query<Department>("SELECT * FROM Department WHERE Id = 1").ToList();
                 foreach (var d in departments)
                     Console.WriteLine($"{d.Id}: {d.Name}");
 

@@ -10,7 +10,7 @@
             public static async Task SeedAsync(AppDbContext context)
             {
                 // apply pending migrations if any
-                //await context.Database.MigrateAsync();
+                await context.Database.MigrateAsync();
 
                 // Seed Rooms if none exist
                 if (!context.Rooms.Any())

@@ -7,7 +7,7 @@ namespace Reading_Room.Services
     {
         Task<List<Reservation>> GetAsync(int? roomId, DateTime? from, DateTime? to);
         Task<(bool success, string? error, Reservation? reservation)> CreateAsync(Reservation res);
-        Task<ReservationDto?> GetByIdAsync(int id);
+        Task<ReservationDto> GetByIdAsync(int id);
         Task<bool> DeleteAsync(int id);
             
         // Analytics

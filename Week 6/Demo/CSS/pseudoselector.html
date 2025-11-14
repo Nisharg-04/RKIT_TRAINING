@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-Classes, Pseudo-Elements & Combinators Demo</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+
+        h1 {
+            text-align: center;
+            text-decoration: underline;
+            color: #333;
+        }
+
+        h2 {
+            color: #0074D9;
+            margin-top: 40px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: 2px solid #333;
+            background-color: white;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+
+        button:hover {
+            background-color: yellow;
+        }
+
+
+        input:focus {
+            border: 2px solid green;
+            outline: none;
+            background-color: #e6ffe6;
+        }
+
+
+        li:first-child {
+            color: red;
+            font-weight: bold;
+        }
+
+
+        li:last-child {
+            color: blue;
+        }
+
+
+        li:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+
+        p::first-letter {
+            font-size: 24px;
+            color: red;
+            font-weight: bold;
+        }
+
+        p::first-line {
+            font-weight: bold;
+            color: darkgreen;
+        }
+
+        p::after {
+            content: " (Read more)";
+            color: gray;
+            font-style: italic;
+        }
+
+        p::selection {
+            background-color: yellow;
+            color: black;
+        }
+
+
+        /* Descendant combinator */
+        div p {
+            color: #000;
+        }
+
+        /* Child combinator */
+        div>p {
+            color: darkorange !;
+        }
+
+        /* Adjacent sibling combinator */
+        div+p {
+            background-color: #ffe5b4 !important;
+            padding: 5px;
+        }
+
+        /* General sibling combinator */
+        div~p {
+            background-color: purple;
+        }
+
+        div {
+            border: 2px dashed #0074D9;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            border: 1px solid #ccc;
+            width: 200px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- Pseudo-Classes Section -->
+    <h2>Pseudo-Classes</h2>
+    <p>Hover over the button or click in the input box to see pseudo-classes in action:</p>
+    <button>Hover Me!</button>
+    <br><br>
+    <input type="text" placeholder="Focus on me">
+
+    <ul>
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+        <li>Fourth item</li>
+    </ul>
+
+    <!-- Pseudo-Elements Section -->
+    <h2>Pseudo-Elements</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit velit at risus gravida, non convallis
+        lorem luctus.</p>
+
+    <!-- Combinators Section -->
+    <h2>Combinators</h2>
+
+    <div>
+        <p>This is a <b>child paragraph</b> inside a div (orange text).</p>
+        <section>
+            <p>This is a nested paragraph inside a section (normal black text).</p>
+        </section>
+    </div>
+
+    <p>This paragraph comes right after a div (highlighted background).</p>
+    <p>This paragraph also follows the div (purple color).</p>
+
+
+</body>
+
+</html>

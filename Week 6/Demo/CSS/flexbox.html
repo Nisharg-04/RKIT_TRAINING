@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Complete Demo</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .flex-container {
+            display: flex;
+            border: 2px solid black;
+            background-color: #f0f0f0;
+            margin-bottom: 30px;
+            padding: 10px;
+            height: 180px;
+        }
+
+        .box {
+            border: 2px solid #0074D9;
+            color: #0074D9;
+            padding: 20px;
+            font-size: 20px;
+            margin: 5px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+
+        h2 {
+            margin-top: 40px;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+
+    <h2>display: flex;</h2>
+    <div class="flex-container">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+    </div>
+
+
+
+    <h2>flex-direction</h2>
+    <div class="flex-container" style="flex-direction: row;">
+        <div class="box">Row</div>
+        <div class="box">Default</div>
+        <div class="box">Direction</div>
+    </div>
+
+    <div class="flex-container" style="flex-direction: column;">
+        <div class="box">Column</div>
+        <div class="box">Direction</div>
+
+    </div>
+
+
+    <h2>justify-content</h2>
+    <div class="flex-container" style="justify-content: flex-start;">
+        <div class="box">Start</div>
+        <div class="box">Start</div>
+        <div class="box">Start</div>
+    </div>
+
+    <div class="flex-container" style="justify-content: center;">
+        <div class="box">Center</div>
+        <div class="box">Center</div>
+        <div class="box">Center</div>
+    </div>
+
+    <div class="flex-container" style="justify-content: space-between;">
+        <div class="box">Between</div>
+        <div class="box">Between</div>
+        <div class="box">Between</div>
+    </div>
+
+    <div class="flex-container" style="justify-content: space-around;">
+        <div class="box">Around</div>
+        <div class="box">Around</div>
+        <div class="box">Around</div>
+    </div>
+
+    <div class="flex-container" style="justify-content: space-evenly;">
+        <div class="box">Evenly</div>
+        <div class="box">Evenly</div>
+        <div class="box">Evenly</div>
+    </div>
+
+    <h2>align-items</h2>
+    <div class="flex-container" style="align-items: flex-start;">
+        <div class="box" style="height: 50px;">flex-start</div>
+        <div class="box" style="height: 100px;">flex-start</div>
+        <div class="box" style="height: 130px;">flex-start</div>
+    </div>
+
+    <div class="flex-container" style="align-items: center;">
+        <div class="box" style="height: 50px;">center</div>
+        <div class="box" style="height: 100px;">center</div>
+        <div class="box" style="height: 130px;">center</div>
+    </div>
+
+    <div class="flex-container" style="align-items: flex-end;">
+        <div class="box" style="height: 50px;">flex-end</div>
+        <div class="box" style="height: 100px;">flex-end</div>
+        <div class="box" style="height: 130px;">flex-end</div>
+    </div>
+
+
+    <h2>flex-wrap</h2>
+    <div class="flex-container" style="flex-wrap: nowrap; height:auto; width: 30%;">
+        <div class="box">No Wrap</div>
+        <div class="box">No Wrap</div>
+        <div class="box">No Wrap</div>
+        <div class="box">No Wrap</div>
+        <div class="box">No Wrap</div>
+    </div>
+
+    <div class="flex-container" style="flex-wrap: wrap; height:auto; width: 30%;">
+        <div class="box">Wrap</div>
+        <div class="box">Wrap</div>
+        <div class="box">Wrap</div>
+        <div class="box">Wrap</div>
+        <div class="box">Wrap</div>
+    </div>
+
+
+    <h2>align-content</h2>
+    <div class="flex-container" style="flex-wrap: wrap; height:300px; width: 30% ;align-content: space-around;">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+    </div>
+
+
+    <h2> order</h2>
+    <div class="flex-container">
+        <div class="box" style="order: 3;">1 (order 3)</div>
+        <div class="box" style="order: 1;">2 (order 1)</div>
+        <div class="box" style="order: 2;">3 (order 2)</div>
+    </div>
+
+
+    <h2>flex-grow</h2>
+    <div class="flex-container">
+        <div class="box" style="flex-grow: 1;">Grow 1</div>
+        <div class="box" style="flex-grow: 2;">Grow 2</div>
+        <div class="box" style="flex-grow: 3;">Grow 3</div>
+    </div>
+
+
+    <h2>align-self</h2>
+    <div class="flex-container" style="align-items: center; height:200px;">
+        <div class="box" style="align-self: flex-start;">Top</div>
+        <div class="box" style="align-self: center;">Middle</div>
+        <div class="box" style="align-self: flex-end;">Bottom</div>
+    </div>
+
+</body>
+
+</html>

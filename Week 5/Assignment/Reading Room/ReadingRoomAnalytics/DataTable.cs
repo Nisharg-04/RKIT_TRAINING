@@ -53,8 +53,12 @@ namespace ReadingRoomAnalytics
             var rooms = await db.Rooms.ToListAsync();
             var resTable = reservations.ToDataTable();
             var roomTable = rooms.ToDataTable();
-            DateTime from = DateTime.Today.AddHours(8);
-            DateTime to = DateTime.Today.AddHours(16);
+            DateTime from;
+            DateTime.TryParse("2025-10-31 00:00:00", out from);
+            from = from.AddHours(8);
+            DateTime to;
+            DateTime.TryParse("2025-10-31 00:00:00", out to);
+            to = to.AddHours(16);
 
 
             //busy rooms 

@@ -21,7 +21,7 @@ namespace Reading_Room.Data
             modelBuilder.Entity<Reservation>()
                 .HasIndex(r => new { r.RoomId, r.Start, r.End });
 
-            // seed data (small)
+            // seed data 
             modelBuilder.Entity<Room>().HasData(
                 new Room { Id = 1, Name = "Room A", Capacity = 6 },
                 new Room { Id = 2, Name = "Room B", Capacity = 10 },

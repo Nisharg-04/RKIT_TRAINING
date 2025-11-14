@@ -1,27 +1,27 @@
 ﻿namespace Reading_Room.Models
 {
     /// <summary>
-    /// A class representing a room in the reading room application.
+    /// This class stores details about a room in the reading room.
     /// </summary>
     public class Room
     {
         /// <summary>
-        /// A unique identifier for the room.
+        /// Unique ID for each room.
         /// </summary>
         public int Id { get; set; }
 
         /// <summary>
-        /// The name of the room.
+        /// Name of the room.
         /// </summary>
         public string Name { get; set; }
 
         /// <summary>
-        /// Capacity of the room.
+        /// Total number of people the room can hold.
         /// </summary>
         public int Capacity { get; set; }
 
         /// <summary>
-        /// Navigation property representing the collection of reservations associated with this room.
+        /// List of all bookings made for this room.
         /// </summary>
         public List<Reservation>? Reservations { get; set; }
     }

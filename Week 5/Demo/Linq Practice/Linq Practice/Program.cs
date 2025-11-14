@@ -16,7 +16,7 @@ namespace Linq_Practice
                         new Product { Id = 6, Name = "Blender", Category = "Appliances", Price = 80.00m }
                     };
 
-            // 2. Customer List
+
             List<Customer> customers = new List<Customer>
                     {
                         new Customer { Id = 101, Name = "Alice Smith", City = "New York" },
@@ -25,7 +25,7 @@ namespace Linq_Practice
                         new Customer { Id = 104, Name = "David Lee", City = "Tokyo" }
                     };
 
-            // 3. Order List
+
             List<Order> orders = new List<Order>
                     {
                         new Order { OrderId = 1, CustomerId = 101, OrderDate = new DateTime(2025, 1, 15) },
@@ -34,7 +34,6 @@ namespace Linq_Practice
                         new Order { OrderId = 4, CustomerId = 104, OrderDate = new DateTime(2025, 2, 5) }
                     };
 
-            // 4. OrderDetail List
             List<OrderDetail> orderDetails = new List<OrderDetail>
                     {
                         new OrderDetail { OrderId = 1, ProductId = 1, Quantity = 1 }, // Alice buys 1 Laptop
@@ -96,6 +95,6 @@ namespace Linq_Practice
 
 
 
-        }                            
+        }
     }
 }

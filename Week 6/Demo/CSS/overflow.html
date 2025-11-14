@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Overflow Demo</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            text-align: center;
+            text-decoration: underline;
+            color: #333;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 40px;
+        }
+
+        .box {
+            width: 250px;
+            height: 150px;
+            margin: 20px;
+            padding: 10px;
+            border: 3px solid #000;
+            background-color: #fff;
+            overflow: visible;
+        }
+
+        .visible {
+            overflow: visible;
+            background-color: #d0f0c0;
+        }
+
+        .hidden {
+            overflow: hidden;
+            background-color: #ffb6b6;
+        }
+
+        .scroll {
+            overflow: scroll;
+            background-color: #add8e6;
+        }
+
+        .auto {
+            overflow: auto;
+            background-color: #fff3b0;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .content {
+            width: 400px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="container">
+
+
+        <div class="box visible">
+            <h2>overflow: visible</h2>
+            <div class="content">
+                This is an example of <b>overflow: visible</b>.
+                Content spills out of the box when it’s too large for the container.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam porttitor magna in erat.
+            </div>
+        </div>
+
+        <div class="box hidden">
+            <h2>overflow: hidden</h2>
+            <div class="content">
+                This is an example of <b>overflow: hidden</b>.
+                Extra content is clipped and not visible beyond the box’s boundaries.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut libero nec arcu interdum.
+            </div>
+        </div>
+
+
+        <div class="box scroll">
+            <h2>overflow: scroll</h2>
+            <div class="content">
+                This is an example of <b>overflow: scroll</b>.
+                Always shows scrollbars even if content fits.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus faucibus viverra massa. Aenean
+                finibus lectus non orci aliquet, vel feugiat lectus tincidunt. Cras in arcu magna.
+            </div>
+        </div>
+
+
+        <div class="box auto">
+            <h2>overflow: auto</h2>
+            <div class="content">
+                This is an example of <b>overflow: auto</b>.
+                Scrollbars appear only when necessary.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at nulla nec nunc commodo lacinia.
+                Curabitur fringilla fermentum augue, vitae posuere ex congue eget.
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

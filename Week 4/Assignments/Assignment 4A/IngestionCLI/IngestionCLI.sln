@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36518.9 d17.14
+VisualStudioVersion = 17.14.36518.9
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IngestionCLI", "IngestionCLI\IngestionCLI.csproj", "{E5107C07-F761-403F-B487-AA468B3BC31D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryCheckInDomain", "..\..\..\Week 3\Assignments\LibraryCheckIn\LibraryCheckInDomain'\LibraryCheckInDomain.csproj", "{DAF26DA4-69A7-3840-617C-955BD7E4BA99}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IngestionPipeline", "IngestionPipeline\IngestionPipeline.csproj", "{B62BF69F-83D1-4776-846A-624A29E9C1F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryCheckInDomain", "..\..\..\..\Week 3\Assignments\LibraryCheckIn\LibraryCheckInDomain'\LibraryCheckInDomain.csproj", "{8C4FF97D-2AB9-945A-EBAA-3F4FFD629AF6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,14 +19,14 @@ Global
 		{E5107C07-F761-403F-B487-AA468B3BC31D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E5107C07-F761-403F-B487-AA468B3BC31D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E5107C07-F761-403F-B487-AA468B3BC31D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DAF26DA4-69A7-3840-617C-955BD7E4BA99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DAF26DA4-69A7-3840-617C-955BD7E4BA99}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DAF26DA4-69A7-3840-617C-955BD7E4BA99}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DAF26DA4-69A7-3840-617C-955BD7E4BA99}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B62BF69F-83D1-4776-846A-624A29E9C1F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B62BF69F-83D1-4776-846A-624A29E9C1F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B62BF69F-83D1-4776-846A-624A29E9C1F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B62BF69F-83D1-4776-846A-624A29E9C1F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C4FF97D-2AB9-945A-EBAA-3F4FFD629AF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C4FF97D-2AB9-945A-EBAA-3F4FFD629AF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C4FF97D-2AB9-945A-EBAA-3F4FFD629AF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C4FF97D-2AB9-945A-EBAA-3F4FFD629AF6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

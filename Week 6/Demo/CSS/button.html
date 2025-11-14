@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button States Demo (Multiple Buttons)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 40px;
+            background-color: #f8f9fa;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 18px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 10px;
+        }
+
+
+        .btn-primary {
+            background-color: #007bff;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        .btn-primary:active {
+            background-color: #003d80;
+            transform: scale(0.96);
+        }
+
+        .btn-primary:focus {
+            outline: 3px solid #80bdff;
+            outline-offset: 2px;
+        }
+
+        .btn-primary:disabled {
+            background-color: #b8d4ff;
+            color: #666;
+            cursor: not-allowed;
+        }
+
+
+        button:enabled {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+
+    <button class="btn btn-primary">Primary</button>
+
+    <button class="btn btn-primary" disabled>Primary (Disabled)</button>
+
+
+</body>
+
+</html>

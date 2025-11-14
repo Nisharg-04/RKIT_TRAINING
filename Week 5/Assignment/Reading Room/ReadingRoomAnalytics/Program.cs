@@ -23,8 +23,8 @@ namespace ReadingRoomAnalytics
 
             using var scope = host.Services.CreateScope();
             var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-            //ListDemo.listDemo(db);
-            await DataTableDemo.DataTableQuery(db);
+            ListDemo.listDemo(db);
+            //await DataTableDemo.DataTableQuery(db);
 
 
 

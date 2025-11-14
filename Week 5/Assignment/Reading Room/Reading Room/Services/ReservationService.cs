@@ -78,7 +78,7 @@ namespace Reading_Room.Services
                         var e = r.End > to ? to : r.End;
                         return (e - s).TotalMinutes;
                     });
-                    return new { RoomId = g.Key, RoomName = g.First().Room!.Name, TotalMinutes = total };
+                    return new { RoomId = g.Key, RoomName = g.First().Room.Name, TotalMinutes = total };
                 })
                 .OrderByDescending(x => x.TotalMinutes)
                 .Take(topN)

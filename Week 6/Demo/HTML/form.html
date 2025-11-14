@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete HTML Form with Fieldsets</title>
+</head>
+
+<body>
+
+    <h1>HTML Form Demonstration</h1>
+    <hr>
+
+    <form action="#" method="post">
+
+        <!-- Personal Information Section -->
+        <fieldset>
+            <legend>
+                <h3>Personal Information</h3>
+            </legend>
+
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname" placeholder="Enter your first name"><br><br>
+
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname" placeholder="Enter your last name"><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="example@email.com"><br><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password"><br><br>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="12345-67890"><br><br>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob"><br><br>
+
+            <label for="time">Preferred Contact Time:</label>
+            <input type="time" id="time" name="time"><br><br>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" min="1" max="100"><br><br>
+
+            <label for="gender">Gender:</label><br>
+            <input type="radio" id="male" name="gender" value="Male"> Male<br>
+            <input type="radio" id="female" name="gender" value="Female"> Female<br>
+            <input type="radio" id="other" name="gender" value="Other"> Other<br><br>
+        </fieldset>
+
+        <br>
+
+        <!-- Preferences Section -->
+        <fieldset>
+            <legend>
+                <h3>Preferences</h3>
+            </legend>
+
+            <label for="color">Favorite Color:</label>
+            <input type="color" id="color" name="color"><br><br>
+
+            <label for="range">Satisfaction Level (1-10):</label>
+            <input type="range" id="range" name="range" min="1" max="10"><br><br>
+
+            <label for="file">Upload Your Resume:</label>
+            <input type="file" id="file" name="file"><br><br>
+
+            <label for="country">Select Your Country:</label>
+            <select id="country" name="country">
+                <option value="">--Select--</option>
+                <option value="India">India</option>
+                <option value="USA">USA</option>
+                <option value="UK">UK</option>
+                <option value="Canada">Canada</option>
+            </select><br><br>
+
+            <label for="language">Select Known Languages:</label><br>
+            <input type="checkbox" id="english" name="language" value="English"> English<br>
+            <input type="checkbox" id="hindi" name="language" value="Hindi"> Hindi<br>
+            <input type="checkbox" id="gujarati" name="language" value="Gujarati"> Gujarati<br><br>
+        </fieldset>
+
+        <br>
+
+        <!-- Additional Info Section -->
+        <fieldset>
+            <legend>
+                <h3>Additional Information</h3>
+            </legend>
+
+            <label for="bio">Your Bio:</label><br>
+            <textarea id="bio" name="bio" rows="5" cols="40"
+                placeholder="Write something about yourself..."></textarea><br><br>
+
+            <label for="url">Personal Website:</label>
+            <input type="url" id="url" name="url" placeholder="https://example.com"><br><br>
+
+            <label for="month">Select Month:</label>
+            <input type="month" id="month" name="month"><br><br>
+
+            <label for="week">Select Week:</label>
+            <input type="week" id="week" name="week"><br><br>
+        </fieldset>
+
+        <br>
+
+        <!-- Form Controls -->
+        <fieldset>
+            <legend>
+                <h3>Form Controls</h3>
+            </legend>
+            <input type="reset" value="Reset Form">
+            <input type="submit" value="Submit Form">
+        </fieldset>
+
+    </form>
+
+</body>
+
+</html>

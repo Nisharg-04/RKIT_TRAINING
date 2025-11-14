@@ -74,7 +74,6 @@ namespace LibraryCheckInDomain
             report.AppendLine("Top 5 Titles by Penalty:");
             for (int i = 0; i < TopPenaltyBooks.Count; i++)
             {
-                var book = TopPenaltyBooks[i];
                 report.AppendLine(TopPenaltyBooks[i]);
             }
 

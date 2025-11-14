@@ -4,39 +4,39 @@ using MySql.Data.MySqlClient;
 
 namespace ADO_NET_DisconnectedDemo
 {
-     class ConnectionLess
+    class ConnectionLess
     {
         static void Main(string[] args)
         {
-            string connStr = "Server=localhost;Database=minipayrolldb;User ID=root;Password=nisharg2004;";
+            string connStr = "Server=localhost;Database=minipayrolldb;User ID=root;Password=****;";
 
-        
+
             using MySqlConnection conn = new MySqlConnection(connStr);
             string selectQuery = "SELECT * FROM prlm01";
             MySqlDataAdapter adapter = new MySqlDataAdapter(selectQuery, conn);
 
- 
+
             MySqlCommandBuilder builder = new MySqlCommandBuilder(adapter);
 
-       
+
             DataSet ds = new DataSet();
 
             try
             {
-            
+
                 adapter.Fill(ds, "Departments");
                 DataTable table = ds.Tables["Departments"];
 
-       
-            
+
+
                 Console.WriteLine("Current Departments:");
                 foreach (DataRow row in table.Rows)
                 {
                     Console.WriteLine($"{row["t01f01"],-5} | {row["t01f02"]}");
                 }
 
-          
-         
+
+
                 DataRow newRow = table.NewRow();
                 newRow["t01f02"] = "Management Department";
                 table.Rows.Add(newRow);
@@ -44,7 +44,7 @@ namespace ADO_NET_DisconnectedDemo
 
                 if (table.Rows.Count > 0)
                 {
-       
+
                     table.Rows[0]["t01f02"] = table.Rows[0]["t01f02"] + " (Updated)";
                 }
 
