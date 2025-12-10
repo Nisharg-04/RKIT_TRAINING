@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h2>Var-let-const</h2>
+
+    <script>
+        var a = 10;
+        console.log(a);
+        var a = 20;
+        console.log(a);
+        a = 30;
+        console.log(a);
+        {
+            var x = 100;
+        }
+        console.log(x);
+
+        let b = 10;
+        console.log(b);
+
+        // let b = 20; // error
+
+        b = 20;
+        console.log(b);
+
+        {
+            let y = 50;
+            console.log(y);
+        }
+        // console.log(y); //error
+        const c = 10;
+        console.log(c); // 10
+
+        // c = 20; // error
+
+        {
+            const z = 99;
+            console.log(z);
+        }
+        // console.log(z); // error
+
+        // Special case: const with object
+        const person = { name: "John" };
+        person.name = "Mike";
+        console.log(person.name);
+
+        // person = {} // error
+
+    </script>
+
+</body>
+
+</html>

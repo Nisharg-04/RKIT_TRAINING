@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Document</title>
+    <style>
+        .todo {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .todo input {
+            width: 70%;
+            padding: 8px;
+        }
+
+        .todo button {
+            padding: 8px 12px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin: 6px 0;
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .done {
+            text-decoration: line-through;
+            color: #888;
+        }
+
+        .remove {
+            color: white;
+            background: #e74c3c;
+            border: none;
+            padding: 4px 8px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="todo">
+        <h2 id="title">My Todo List</h2>
+        <div>
+            <input type="text" id="taskInput" placeholder="Add a task..." />
+            <button id="addBtn">Add</button>
+        </div>
+
+
+        <ul id="taskList"></ul>
+
+
+        <button id="bulkAdd">Add 100 items (fast)</button>
+    </div>
+
+    <script>
+        // SELECTING ELEMENTS
+        const title = document.getElementById('title');
+        const input = document.querySelector('#taskInput');
+        const addBtn = document.getElementById('addBtn');
+        const list = document.getElementById('taskList');
+        const bulkAddBtn = document.getElementById('bulkAdd');
+
+        function createTaskNode(text) {
+            const li = document.createElement('li');
+            const span = document.createElement('span');
+            span.textContent = text;
+            span.className = 'task-text';
+
+            // toggle done on click using classList
+            span.addEventListener('click', () => {
+                span.classList.toggle('done'); // editing styles via classes
+            });
+
+            const removeBtn = document.createElement('button');
+            removeBtn.textContent = 'Remove';
+            removeBtn.className = 'remove';
+
+            removeBtn.addEventListener('click', () => {
+
+                li.remove();
+            });
+
+            li.append(span, removeBtn);
+            return li;
+        }
+        addBtn.addEventListener('click', () => {
+            const val = input.value.trim();
+            if (!val) return;
+            const node = createTaskNode(val);
+            list.appendChild(node);   // insert into DOM
+            input.value = '';
+            input.focus();
+        });
+
+        // enter key adds
+        input.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') addBtn.click();
+        });
+
+        // bulk add using DocumentFragment (performance)
+        bulkAddBtn.addEventListener('click', () => {
+            const frag = document.createDocumentFragment();
+            for (let i = 0; i < 100; i++) {
+                const node = createTaskNode('Task #' + (i + 1));
+                frag.appendChild(node);
+            }
+            list.appendChild(frag);
+        });
+    </script>
+</body>
+
+</html>

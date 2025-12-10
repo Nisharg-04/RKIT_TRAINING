@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = [1, 2];
+        arr.push(3);
+        console.log("push:", arr);
+        arr.pop();
+        console.log("pop:", arr);
+        arr.shift();
+        console.log("shift:", arr);
+        arr.unshift(1);
+        console.log("unshift:", arr);
+
+        let nums1 = [10, 20, 30, 40];
+        let part = nums1.slice(1, 3);
+        console.log("slice result:", part);
+        console.log("original:", nums1);
+
+        let nums2 = [10, 20, 30];
+        nums2.splice(1, 1);
+        console.log("splice remove:", nums2);
+
+        let m = [1, 2, 3];
+        let doubled = m.map(x => x * 2);
+        console.log(doubled);
+
+        let f = [1, 2, 3, 4];
+        let even = f.filter(x => x % 2 === 0);
+        console.log(even);
+
+        let r = [1, 2, 3, 4];
+        let total = r.reduce((acc, cur) => acc + cur, 0);
+        console.log(total);
+
+        let users = [
+            { id: 1, name: "A" },
+            { id: 2, name: "B" }
+        ];
+        let found = users.find(u => u.id === 2);
+        console.log(found);
+
+        console.log([1, 3, 5].some(x => x % 2 === 0));
+
+        console.log([2, 4, 6].every(x => x % 2 === 0));
+
+        let s = [10, 1, 5];
+        console.log("default sort:", s.sort());
+
+        s.sort((a, b) => a - b);
+        console.log("fixed sort:", s);
+
+        let rev = [1, 2, 3];
+        rev.reverse();
+        console.log(rev);
+
+        const arr2 = [10, 20, 30];
+        const [a, b, c] = arr2;
+        console.log(a, b, c);
+
+        let original = [1, 2];
+        let copy = [...original];
+        console.log("copy:", copy);
+        console.log([... "NISHARG"]);
+
+    </script>
+
+</body>
+
+</html>

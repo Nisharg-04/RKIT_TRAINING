@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function greet() {
+            console.log("Hello!");
+        }
+        greet();
+
+        const greetExpr = function () {
+            console.log("Hello from expression!");
+        };
+        greetExpr();
+
+        const add = (a, b) => a + b;
+        console.log(add(2, 3));
+
+        function sayHello(name = "Guest") {
+            console.log("Hello", name);
+        }
+        sayHello();
+        sayHello("Nisharg");
+
+        function multiply(a, b) {
+            return a * b;
+        }
+        console.log(multiply(4, 5));
+
+        //callback or higher order function
+        function greetUser(name) {
+            console.log("Hello " + name);
+        }
+
+        function processUser(callback) {
+            callback("Nisharg");
+        }
+
+        processUser(greetUser);
+        function calculate(a, b, operation) {
+            return operation(a, b);
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

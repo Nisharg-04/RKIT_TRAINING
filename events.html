@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Events Demo</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+        }
+
+        .btn {
+            padding: 6px 10px;
+            cursor: pointer;
+            margin: 5px 0;
+        }
+
+        #log {
+            background: #f2f2f2;
+            padding: 10px;
+            margin-top: 15px;
+            border-radius: 6px;
+        }
+
+        #hoverBox {
+            width: 200px;
+            height: 100px;
+            background: lightblue;
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .outer {
+            padding: 40px;
+            background: lightcoral;
+        }
+
+        .middle {
+            padding: 40px;
+            background: lightgreen;
+        }
+
+        .inner {
+            padding: 40px;
+            background: lightblue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Simple Events Demo</h2>
+
+    <button id="clickBtn" class="btn">Click Me</button>
+    <button id="dblBtn" class="btn">Double Click Me</button>
+
+
+    <div id="hoverBox">Hover</div>
+
+
+    <br><br>
+    <input id="textInput" placeholder="Type something..." />
+
+
+    <br><br>
+    <form id="myForm">
+        <input name="name" id="nameInput" placeholder="Enter name" required>
+        <button type="submit" class="btn">Submit</button>
+    </form>
+
+    <div class="outer">
+        OUTER
+        <div class="middle">
+            MIDDLE
+            <div class="inner">
+                INNER
+            </div>
+        </div>
+    </div>
+
+
+    <div id="log">Event log...</div>
+
+    <script>
+
+        function log(msg) {
+            document.getElementById("log").textContent = msg;
+            console.log(msg);
+        }
+
+
+
+        document.getElementById("clickBtn").addEventListener("click", () => {
+            log("Button clicked!");
+        });
+
+        document.getElementById("dblBtn").addEventListener("dblclick", () => {
+            log("Button double-clicked!");
+        });
+
+        // Mouseover / Mouseout
+        const hover = document.getElementById("hoverBox");
+
+        hover.addEventListener("mouseover", () => {
+            hover.style.background = "lightgreen";
+            log("Mouse entered the box");
+        });
+
+        hover.addEventListener("mouseout", () => {
+            hover.style.background = "lightblue";
+            log("Mouse left the box");
+        });
+
+
+
+        // keydown example
+        document.getElementById("textInput").addEventListener("keydown", (e) => {
+            log("Key down: " + e.key);
+        });
+        document.getElementById("textInput").addEventListener("keypress", (e) => {
+            log("Key pressed: " + e.key);
+        });
+
+
+        document.getElementById("nameInput").addEventListener("input", (e) => {
+            log("Typing in form input: " + e.target.value);
+        });
+
+        const form = document.getElementById("myForm");
+
+        form.addEventListener("submit", (e) => {
+            e.preventDefault(); // prevent actual form submission
+            const name = e.target.name.value;
+            log("Form submitted. Name: " + name);
+        });
+
+
+        document.querySelector(".outer").addEventListener("click", () => {
+            log("CAPTURE → OUTER");
+        }, true);
+
+        document.querySelector(".middle").addEventListener("click", () => {
+            log("CAPTURE → MIDDLE");
+        }, true);
+        document.querySelector(".inner").addEventListener("click", () => {
+            log("CAPTURE → INNER");
+        }, true);
+
+
+        document.querySelector(".inner").addEventListener("click", () => {
+            log("BUBBLE → INNER");
+        });
+
+        document.querySelector(".middle").addEventListener("click", () => {
+            log("BUBBLE → MIDDLE");
+        });
+
+        document.querySelector(".outer").addEventListener("click", () => {
+            log("BUBBLE → OUTER");
+        });
+
+    </script>
+
+</body>
+
+</html>

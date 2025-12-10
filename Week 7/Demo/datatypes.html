@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let a;
+        console.log("a =", a, "| type:", typeof a);
+        let b = null;
+        console.log("b =", b, "| type:", typeof b);
+        let isOnline = true;
+        console.log("isOnline =", isOnline, "| type:", typeof isOnline);
+        let age = 21;
+        console.log("age =", age, "| type:", typeof age);
+        let big = 1000000000000000000n;
+        console.log("big =", big, "| type:", typeof big);
+        let name = "Nisharg";
+        console.log("name =", name, "| type:", typeof name);
+        let sym = Symbol("id");
+        console.log("symbol =", sym.toString(), "| type:", typeof sym);
+
+
+        const obj = { x: 10 };
+        console.log("obj =", obj, "| type:", typeof obj);
+
+        const arr = [1, 2, 3];
+        console.log("arr =", arr, "| type:", typeof arr);
+
+        function greet() { }
+        console.log("greet =", greet, "| type:", typeof greet);
+        console.log(typeof null);       // object (bug in JS)
+
+        // copy by value
+        let p = 10;
+        let q = p;  // copy value
+        q = 20;
+
+        console.log("p =", p); // 10
+        console.log("q =", q); // 20
+
+        //copy by refrence
+        let obj1 = { x: 10 };
+        let obj2 = obj1; // both point to same object
+
+        obj2.x = 99;
+
+        console.log("obj1.x =", obj1.x); // 99
+        console.log("obj2.x =", obj2.x); // 99
+
+
+
+    </script>
+</body>
+
+</html>

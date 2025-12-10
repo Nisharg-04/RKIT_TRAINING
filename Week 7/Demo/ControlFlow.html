@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let age = 18;
+
+        if (age < 18) {
+            console.log("You are a minor.");
+        } else if (age === 18) {
+            console.log("You just became an adult!");
+        } else {
+            console.log("You are an adult.");
+        }
+        let day = 2;
+
+        switch (day) {
+            case 1:
+                console.log("Monday");
+                break;
+            case 2:
+                console.log("Tuesday");
+                break;
+            case 3:
+                console.log("Wednesday");
+                break;
+            default:
+                console.log("Invalid day");
+
+        }
+        for (let i = 1; i <= 5; i++) {
+            console.log("For loop count:", i);
+        }
+
+        let w = 1;
+        while (w <= 3) {
+            console.log("While loop:", w);
+            w++;
+        }
+
+        let d = 1;
+        do {
+            console.log("Do While loop:", d);
+            d++;
+        } while (d <= 3);
+
+        let colors = ["red", "green", "blue"];
+        for (let c of colors) {
+            console.log("Color:", c);
+        }
+        for (let index in colors) {
+            console.log("Index:", index, "Color:", colors[index]);
+        }
+
+        for (let ch of "JS") {
+            console.log("Character:", ch);
+        }
+        let person = {
+            name: "Nisharg",
+            age: 21,
+            city: "Anand"
+        };
+
+        for (let key in person) {
+            console.log(key, "=", person[key]);
+        }
+    </script>
+
+</body>
+
+</html>
