@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+
+<body>
+
+    <p id="output"></p>
+    <br>
+    <a href="#section1">Go to #section1</a><br>
+    <a href="#section2">Go to #section2</a>
+
+
+    <div style="height:2000px;"></div>
+
+    <script>
+        const out = document.getElementById("output");
+
+        function log(msg) {
+            console.log(msg);
+            out.innerText = msg;
+        }
+        window.addEventListener("load", () => {
+            log("load - Page fully loaded");
+        });
+
+        window.addEventListener("beforeunload", (e) => {
+            log("beforeunload - Page is about to unload");
+        });
+
+
+        window.addEventListener("unload", () => {
+            console.log("unload - Page is unloading");
+        });
+
+        window.addEventListener("resize", () => {
+            log("resize - Window resized");
+        });
+
+
+        window.addEventListener("scroll", () => {
+            log("scroll - Window scrolling");
+        });
+
+        window.addEventListener("hashchange", () => {
+            log("hashchange - URL hash changed to: " + location.hash);
+        });
+
+        window.addEventListener("popstate", () => {
+            log("popstate → Back/forward was used");
+        });
+
+
+        window.addEventListener("online", () => {
+            log("online - Internet connected");
+        });
+
+        window.addEventListener("offline", () => {
+            log("offline - Internet disconnected");
+        });
+
+    </script>
+
+
+
+</body>
+
+</html>

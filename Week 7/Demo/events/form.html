@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="myForm">
+        <input id="textInput" type="text" placeholder="Type something..." required minlength="3" />
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+
+    <div id="output"></div>
+    <script>
+        const form = document.getElementById("myForm");
+        const input = document.getElementById("textInput");
+        const out = document.getElementById("output");
+
+        function log(msg) {
+            console.log(msg);
+            out.innerText = msg;
+        }
+
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            log(`Form Submitted with value: "${input.value}"`);
+        });
+
+        form.addEventListener("reset", () => {
+            log("Form Reset");
+        });
+
+        input.addEventListener("input", () => {
+            log(`Input Changed: "${input.value}"`);
+        });
+
+        input.addEventListener("focus", () => {
+            log("Input Focused");
+        });
+
+        input.addEventListener("blur", () => {
+            log("Input Lost Focus");
+        });
+
+        input.addEventListener("change", () => {
+            log(`Input Value Changed to: "${input.value}"`);
+        });
+        input.addEventListener("invalid", () => {
+            log("invalid → Validation failed! (Min length = 3)");
+        });
+
+    </script>
+</body>
+
+</html>

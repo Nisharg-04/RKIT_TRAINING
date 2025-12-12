@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+    <style>
+        #box {
+            width: 250px;
+            height: 150px;
+            background: #add8e6;
+            border: 2px solid black;
+            cursor: pointer;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="box">
+        Hover / Click Here
+    </div>
+
+    <div id="output"></div>
+
+    <script>
+
+        const box = document.getElementById("box");
+        const out = document.getElementById("output");
+
+        function log(msg) {
+            console.log(msg);
+            out.innerText = msg;
+        }
+        box.addEventListener("click", () => log("click → Mouse clicked"));
+
+        box.addEventListener("dblclick", () => log("dblclick → Double clicked"));
+
+        box.addEventListener("mousedown", () => log("mousedown → Mouse button pressed"));
+
+        box.addEventListener("mouseup", () => log("mouseup → Mouse button released"));
+
+        box.addEventListener("mousemove", () => log("mousemove → Mouse moving inside element"));
+
+        box.addEventListener("mouseenter", () => log("mouseenter → Mouse entered (NO BUBBLING)"));
+
+        box.addEventListener("mouseleave", () => log("mouseleave → Mouse left (NO BUBBLING)"));
+
+        box.addEventListener("mouseover", () => log("mouseover → Mouse entered (WITH BUBBLING)"));
+
+        box.addEventListener("mouseout", () => log("mouseout → Mouse left (WITH BUBBLING)"));
+
+        box.addEventListener("contextmenu", (e) => {
+            e.preventDefault();
+            log("contextmenu → Right click detected");
+        });
+
+        box.addEventListener("wheel", () => log("wheel → Mouse wheel scrolled"));
+
+    </script>
+
+</body>
+
+</html>

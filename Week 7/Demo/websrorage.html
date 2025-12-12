@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+        }
+
+        button {
+            margin: 5px;
+            padding: 8px 12px;
+        }
+
+        .box {
+            border: 1px solid #aaa;
+            padding: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+
+    <div class="box">
+        <h3>Local Storage</h3>
+        <input type="text" id="localInput" placeholder="Enter something">
+        <button onclick="saveLocal()">Save Data</button>
+        <button onclick="getLocal()">Get Data</button>
+        <button onclick="removeLocal()">Remove Data</button>
+        <button onclick="clearLocal()">Clear All</button>
+        <p id="localOutput"></p>
+    </div>
+
+
+    <div class="box">
+        <h3>Session Storage</h3>
+        <input type="text" id="sessionInput" placeholder="Enter something">
+        <button onclick="saveSession()">Save Data</button>
+        <button onclick="getSession()">Get Data</button>
+        <button onclick="removeSession()">Remove Data</button>
+        <button onclick="clearSession()">Clear All</button>
+        <p id="sessionOutput"></p>
+    </div>
+
+
+    <div class="box">
+        <h3>Store Object in localStorage</h3>
+        <button onclick="saveObject()">Save Object</button>
+        <button onclick="getObject()">Get Object</button>
+        <p id="objectOutput"></p>
+    </div>
+
+    <script>
+
+
+        function saveLocal() {
+            let val = document.getElementById("localInput").value;
+            localStorage.setItem("name", val);
+            document.getElementById("localOutput").innerText = "Save";
+        }
+
+        function getLocal() {
+            const val = localStorage.getItem("name");
+            document.getElementById("localOutput").innerText = "Value: " + val;
+        }
+
+        function removeLocal() {
+            localStorage.removeItem("name");
+            document.getElementById("localOutput").innerText = "Removed";
+        }
+
+        function clearLocal() {
+            localStorage.clear();
+            document.getElementById("localOutput").innerText = " cleared";
+        }
+
+
+        function saveSession() {
+            let val = document.getElementById("sessionInput").value;
+            sessionStorage.setItem("sessionName", val);
+            document.getElementById("sessionOutput").innerText = "Save";
+        }
+
+        function getSession() {
+            const val = sessionStorage.getItem("sessionName");
+            document.getElementById("sessionOutput").innerText = "Value: " + val;
+        }
+
+        function removeSession() {
+            sessionStorage.removeItem("sessionName");
+            document.getElementById("sessionOutput").innerText = "Removed";
+        }
+
+        function clearSession() {
+            sessionStorage.clear();
+            document.getElementById("sessionOutput").innerText = " cleared";
+        }
+
+        function saveObject() {
+            const user = { name: "Nisharg", age: 21 };
+            localStorage.setItem("user", JSON.stringify(user));
+            document.getElementById("objectOutput").innerText = "Object Saved";
+        }
+
+        function getObject() {
+            const obj = JSON.parse(localStorage.getItem("user"));
+            document.getElementById("objectOutput").innerText =
+                obj ? ("Name: " + obj.name + ", Age: " + obj.age) : "No object found";
+        }
+
+
+    </script>
+
+</body>
+
+</html>

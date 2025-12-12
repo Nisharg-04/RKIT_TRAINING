@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container">
+        Text Node
+        <p id="p1">Paragraph 1</p>
+        <p id="p2">Paragraph 2</p>
+        <p id="p3">Paragraph 3</p>
+    </div>
+    <script>
+        const container = document.getElementById('container');
+        console.log(container.childNodes);
+        console.log(container.children);
+        console.log(container.firstChild);
+        console.log(container.firstElementChild);
+        console.log(container.lastChild);
+        console.log(container.lastElementChild);
+
+        const p2 = document.getElementById("p2");
+        console.log(p2.parentNode);
+        console.log(p2.parentElement);
+        console.log(p2.previousSibling);
+        console.log(p2.previousElementSibling);
+        console.log(p2.nextSibling);
+        console.log(p2.nextElementSibling);
+
+    </script>
+</body>
+
+</html>

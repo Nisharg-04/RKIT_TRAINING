@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <video id="video" width="300" controls>
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4">
+    </video>
+
+    <p id="output"></p>
+
+    <script>
+        const video = document.getElementById("video");
+        const out = document.getElementById("output");
+
+        function log(msg) {
+            console.log(msg);
+            out.innerText = msg;
+        }
+
+        video.addEventListener("play", () => {
+            log("play - Video started playing");
+        });
+
+        video.addEventListener("pause", () => {
+            log("pause - Video paused");
+        });
+
+        video.addEventListener("ended", () => {
+            log("ended -  Video finished");
+        });
+
+        video.addEventListener("timeupdate", () => {
+            log("timeupdate - Current time: " + video.currentTime.toFixed(2));
+        });
+
+        video.addEventListener("volumechange", () => {
+            log("volumechange - Volume: " + video.volume);
+        });
+
+        video.addEventListener("seeking", () => {
+            log("seeking - User is seeking");
+        });
+
+        video.addEventListener("seeked", () => {
+            log("seeked - Seek completed");
+        });
+
+        video.addEventListener("loadeddata", () => {
+            log("loadeddata - Video data loaded and ready to play");
+        });
+
+        video.addEventListener("error", () => {
+            log("error -  Video error occurred");
+        });
+    </script>
+
+</body>
+
+</html>

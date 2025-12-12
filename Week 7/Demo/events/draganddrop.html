@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+    <style>
+        #dragItem {
+            width: 100px;
+            height: 50px;
+            background-color: green;
+            color: white;
+            text-align: center;
+            cursor: grab;
+        }
+    </style>
+
+<body>
+
+    <div id="dragItem" draggable="true">
+        Drag Me
+    </div>
+
+    <br>
+    <div id="dropZone" style="width:200px; height:100px; border:1px solid black;">
+        Drop Here
+    </div>
+
+    <br>
+
+    <p id="output"></p>
+
+    <script>
+        const dragItem = document.getElementById("dragItem");
+        const dropZone = document.getElementById("dropZone");
+        const out = document.getElementById("output");
+
+        function log(msg) {
+            console.log(msg);
+            out.innerText = msg;
+        }
+
+        dragItem.addEventListener("dragstart", () => {
+            log("dragstart - Dragging started");
+        });
+
+        dragItem.addEventListener("drag", () => {
+            log("drag - Dragging");
+        });
+
+        dragItem.addEventListener("dragend", () => {
+            log("dragend - Dragging ended");
+        });
+
+
+        dropZone.addEventListener("dragenter", () => {
+            log("dragenter - Drag entered drop zone");
+        });
+
+        dropZone.addEventListener("dragleave", () => {
+            log("dragleave - Drag left drop zone");
+        });
+
+        dropZone.addEventListener("dragover", (e) => {
+            e.preventDefault(); // required to allow dropping
+            log("dragover - Dragging over drop zone");
+        });
+
+        dropZone.addEventListener("drop", (e) => {
+            e.preventDefault();
+            log("drop -  Item dropped in drop zone");
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cookie Demo</title>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+        }
+
+        .box {
+            border: 1px solid #aaa;
+            padding: 10px;
+            margin-top: 15px;
+        }
+
+        input,
+        button {
+            margin: 5px;
+            padding: 8px 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <h3>Create Cookie</h3>
+        <input type="text" id="cookieName" placeholder="Cookie Name">
+        <input type="text" id="cookieValue" placeholder="Cookie Value">
+        <button onclick="setMyCookie()">Set Cookie</button>
+    </div>
+
+    <div class="box">
+        <h3>Show All Cookies</h3>
+        <button onclick="showCookies()">Show Cookies</button>
+        <p id="cookieOutput"></p>
+    </div>
+
+    <div class="box">
+        <h3>Delete Cookie</h3>
+        <input type="text" id="deleteName" placeholder="Cookie Name">
+        <button onclick="deleteMyCookie()">Delete Cookie</button>
+    </div>
+
+    <script>
+
+        function setMyCookie() {
+            const name = document.getElementById("cookieName").value;
+            const value = document.getElementById("cookieValue").value;
+            document.cookie = `${name}=${value}; max-age=60`;
+            alert("Cookie Set!");
+        }
+
+        function showCookies() {
+            let text = document.cookie.split("; ").join("\n");
+            document.getElementById("cookieOutput").innerText = text;
+        }
+
+        function deleteMyCookie() {
+            const name = document.getElementById("deleteName").value;
+            document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC`;
+            alert("Cookie Deleted!");
+        }
+
+    </script>
+
+</body>
+
+</html>

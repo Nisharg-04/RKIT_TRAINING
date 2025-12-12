@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+    <style>
+        textarea {
+            width: 350px;
+            height: 50px;
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <textarea id="clipArea" placeholder="Try copying, cutting or pasting here..."></textarea>
+
+    <div id="output"></div>
+
+    <script>
+
+        const area = document.getElementById("clipArea");
+        const out = document.getElementById("output");
+        function log(msg) {
+            console.log(msg);
+            out.innerText = msg;
+        }
+        area.addEventListener("beforecopy", () => log("beforecopy - Copying is about to happen"));
+        area.addEventListener("copy", () => {
+            const text = window.getSelection().toString();
+            log("copy - Content Copied: " + text);
+        });
+
+        area.addEventListener("beforecut", () => log("beforecut - Cutting is about to happen"));
+        area.addEventListener("cut", () => {
+            const text = window.getSelection().toString();
+            log("cut - Content Cut: " + text);
+        });
+
+        area.addEventListener("beforepaste", () => log("beforepaste - Pasting is about to happen"));
+        area.addEventListener("paste", () => log("paste - Content Pasted"));
+    </script>
+
+</body>
+
+</html>
