@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.log("Math Constants");
+        console.log("PI:", Math.PI);
+        console.log("E:", Math.E);
+        console.log("SQRT2:", Math.SQRT2);
+        console.log("SQRT1_2:", Math.SQRT1_2);
+        console.log("LN2:", Math.LN2);
+        console.log("LN10:", Math.LN10);
+        console.log("LOG2E:", Math.LOG2E);
+        console.log("LOG10E:", Math.LOG10E);
+
+
+        console.log("\nRounding");
+        let num = 4.7;
+        console.log("Round:", Math.round(num));
+        console.log("Floor:", Math.floor(num));
+        console.log("Ceil:", Math.ceil(num));
+        console.log("Trunc:", Math.trunc(num));
+
+        console.log("\nPower & Roots ");
+        console.log("2^3:", Math.pow(2, 3));
+        console.log("√25:", Math.sqrt(25));
+        console.log("∛27:", Math.cbrt(27));
+
+        console.log("\nAbsolute & Sign ");
+        console.log("Abs(-10):", Math.abs(-10));
+        console.log("Sign(-5):", Math.sign(-5));
+        console.log("Sign(0):", Math.sign(0));
+        console.log("Sign(5):", Math.sign(5));
+
+        console.log("\nMin & Max");
+        console.log("Min:", Math.min(5, 2, 9));
+        console.log("Max:", Math.max(5, 2, 9));
+
+        console.log("\nRandom Numbers");
+        let random01 = Math.random();
+        console.log("Random (0-1):", random01);
+
+        let random1to10 = Math.floor(Math.random() * 10) + 1;
+        console.log("Random 1-10:", random1to10);
+
+        console.log("\nLogarithms");
+        console.log("ln(10):", Math.log(10));
+        console.log("log10(100):", Math.log10(100));
+        console.log("log2(8):", Math.log2(8));
+
+        console.log("\nTrigonometry");
+        console.log("sin(0):", Math.sin(0));
+        console.log("cos(0):", Math.cos(0));
+        console.log("tan(0):", Math.tan(0));
+
+        console.log("\nDegree to Radian");
+        let degrees = 90;
+        let radians = degrees * (Math.PI / 180);
+        console.log("sin(90°):", Math.sin(radians));
+    </script>
+
+</body>
+
+</html>

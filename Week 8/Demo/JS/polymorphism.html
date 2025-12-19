@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Shape {
+            area() {
+                return 0;
+            }
+        }
+
+        class Rectangle extends Shape {
+            area() {
+                return 10 * 5;
+            }
+        }
+
+        class Circle extends Shape {
+            area() {
+                console.log(this.__proto__.area());
+                return Math.PI * 5 * 5;
+            }
+        }
+        class Triangle extends Shape {
+
+        }
+
+        const shapes = [
+            new Rectangle(),
+            new Circle(),
+            new Triangle()
+        ];
+        console.log(shapes);
+
+        shapes.forEach(s => console.log(s.area()));
+    </script>
+
+
+</body>
+
+</html>

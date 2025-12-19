@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let str = "  JavaScript String Methods Demo  ";
+
+        console.log("Original:", str);
+
+        console.log("Length:", str.length);
+
+
+        let trimmed = str.trim();
+        console.log("Trimmed:", trimmed);
+
+
+        console.log("Uppercase:", trimmed.toUpperCase());
+        console.log("Lowercase:", trimmed.toLowerCase());
+
+
+        console.log("charAt(4):", trimmed.charAt(4));
+        console.log("at(-1):", trimmed.at(-1));
+
+
+        console.log("indexOf('String'):", trimmed.indexOf("String"));
+        console.log("includes('Demo'):", trimmed.includes("Demo"));
+        console.log("startsWith('Java'):", trimmed.startsWith("Java"));
+        console.log("endsWith('Demo'):", trimmed.endsWith("Demo"));
+
+
+        console.log("slice(0,10):", trimmed.slice(0, 10));
+        console.log("substring(11,17):", trimmed.substring(11, 17));
+
+
+        console.log("replace:", trimmed.replace("Demo", "Example"));
+        console.log("replaceAll:", "a a a".replaceAll("a", "b"));
+
+
+        let words = trimmed.split(" ");
+        console.log("Split:", words);
+
+
+        console.log("Join:", words.join("-"));
+
+
+        let num = "7";
+        console.log("padStart:", num.padStart(3, "0"));
+        console.log("padEnd:", num.padEnd(3, "0"));
+
+        console.log("Repeat:", "JS ".repeat(3));
+
+
+        console.log("localeCompare:", "apple".localeCompare("banana"));
+
+
+        console.log("Concat:", "Hello".concat(" ", "World"));
+
+        console.log("charCodeAt:", "A".charCodeAt(0));
+    </script>
+</body>
+
+</html>

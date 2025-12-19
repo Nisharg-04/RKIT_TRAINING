@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function BankAccount(balance) {
+        //     let _balance = balance;
+
+        //     this.getBalance = function () {
+        //         return _balance;
+        //     };
+        // }
+
+        // const acc = new BankAccount(5000);
+
+        // console.log(acc.getBalance());
+        // console.log(acc._balance); 
+
+
+
+
+        class BankAccount {
+            #balance;
+
+            constructor(balance) {
+                this.#balance = balance;
+            }
+
+            getBalance() {
+                return this.#balance;
+            }
+        }
+
+        const acc = new BankAccount(10000);
+        console.log(acc.getBalance());
+        // acc.#balance syntax error
+
+    </script>
+
+</body>
+
+</html>

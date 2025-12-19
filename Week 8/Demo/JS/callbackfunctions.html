@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function greet(name, callback) {
+            console.log("Hello " + name);
+            callback();
+        }
+
+        greet("Nisharg", function () {
+            console.log("Callback executed");
+        });
+
+        setTimeout(function () {
+            console.log("Executed later");
+        }, 2000);
+
+
+
+        // callbackk hell example
+        setTimeout(() => {
+            console.log("Step 1");
+
+            setTimeout(() => {
+                console.log("Step 2");
+
+                setTimeout(() => {
+                    console.log("Step 3");
+                }, 1000);
+
+            }, 1000);
+
+        }, 1000);   
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Animal() { }
+        Animal.prototype.eat = function () {
+            console.log("Eating");
+        };
+
+        function Dog() { }
+        Dog.prototype = Object.create(Animal.prototype);
+        Dog.prototype.bark = function () {
+            console.log("Barking");
+        };
+
+        const d = new Dog();
+        d.eat();
+        d.bark();
+
+        console.log(d.__proto__ === Dog.prototype);
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+import { add, subtract, PI } from "./utils/math.js";
+import { getUser as fetchUser } from "./services/userService.js";
+import * as userService from "./services/userService.js";
+import logger from "./utils/logger.js";
+logger("Application started");
+logger("Add: " + add(5, 3));
+logger("Subtract: " + subtract(10, 4));
+logger("PI value: " + PI);
+const user = fetchUser();
+logger("User name: " + user.name);
+logger("Is Admin: " + userService.isAdmin(user));
+logger("Application finished");

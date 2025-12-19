@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class MathUtil {
+            static add(a, b) {
+                return a + b;
+            }
+        }
+
+        console.log(MathUtil.add(5, 3));
+
+        const m = new MathUtil();
+        // m.add(2,3); error
+
+        class A {
+            static hello() {
+                console.log("Hello");
+            }
+        }
+
+        class B extends A { }
+
+        B.hello();
+    </script>
+
+
+</body>
+
+</html>

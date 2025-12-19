@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.log("Create Dates");
+        let now = new Date();
+        console.log("Current:", now);
+
+        let specific = new Date(2025, 0, 1);
+        console.log("Specific Date:", specific);
+
+        console.log("\nGet Date Parts");
+        console.log("Year:", now.getFullYear());
+        console.log("Month:", now.getMonth() + 1); // +1 for human
+        console.log("Date:", now.getDate());
+        console.log("Day:", now.getDay());
+        console.log("Hours:", now.getHours());
+        console.log("Minutes:", now.getMinutes());
+        console.log("Seconds:", now.getSeconds());
+
+        console.log("\nSet Date Parts");
+        let d = new Date();
+        d.setFullYear(2030);
+        d.setMonth(11);
+        d.setDate(25);
+        console.log("Modified:", d);
+
+        console.log("\nFormatting Dates");
+        console.log("toString:", now.toString());
+        console.log("toDateString:", now.toDateString());
+        console.log("toTimeString:", now.toTimeString());
+        console.log("toISOString:", now.toISOString());
+        console.log("toLocaleString:", now.toLocaleString());
+        console.log("toLocaleDateString:", now.toLocaleDateString());
+        console.log("toLocaleTimeString:", now.toLocaleTimeString());
+
+        console.log("\nTimestamp");
+        console.log("Date.now():", Date.now());
+        console.log("getTime():", now.getTime());
+
+        console.log("\nDate Difference");
+        let d1 = new Date("2025-01-01");
+        let d2 = new Date("2025-01-10");
+        let diffMs = d2 - d1;
+
+        console.log("Difference in ms:", diffMs);
+        let days = diffMs / (1000 * 60 * 60 * 24);
+        console.log("Difference in days:", days);
+
+        console.log("\nDate Comparison");
+        console.log(d1 < d2); // true
+
+        console.log("\nParsing ");
+        console.log("Parsed:", Date.parse("2025-01-01"));
+
+        console.log("\nUTC Example");
+        console.log("UTC Hours:", now.getUTCHours());
+    </script>
+</body>
+
+</html>

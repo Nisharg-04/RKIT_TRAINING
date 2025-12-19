@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Person(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+
+        const p1 = new Person("Nisharg", 21);
+        const p2 = new Person("Amit", 22);
+
+        console.log(p1);
+        console.log(p2);
+
+
+        // function User(name) {
+        //     this.name = name;
+        //     this.sayHi = function () {
+        //         console.log("Hi " + this.name);
+        //     };
+        // }
+
+        // const u1 = new User("A");
+        // const u2 = new User("B");
+
+        // console.log(u1.sayHi === u2.sayHi)
+
+
+        function User(name) {
+            this.name = name;
+        }
+
+        User.prototype.sayHi = function () {
+            console.log("Hi " + this.name);
+        };
+
+        const u1 = new User("A");
+        const u2 = new User("B");
+
+        console.log(u1.sayHi === u2.sayHi);
+        u1.sayHi();
+    </script>
+</body>
+
+</html>
