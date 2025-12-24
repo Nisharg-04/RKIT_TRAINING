@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="title">jQuery Selector Engine Demo</h1>
+
+    <p>This is paragraph 1</p>
+    <p>This is paragraph 2</p>
+
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+
+    <hr>
+
+    <h3>Form Elements</h3>
+    <input type="text" placeholder="Text input"><br><br>
+    <input type="password" placeholder="Password"><br><br>
+    <input type="hidden" value="secret">
+
+    <hr>
+
+    <h3>Hierarchy Demo</h3>
+    <div id="parent">
+        <p>Direct Child Paragraph</p>
+
+        <section>
+            <p>Nested Paragraph</p>
+        </section>
+    </div>
+
+    <hr>
+
+    <h3>List (Pseudo Selectors)</h3>
+    <ul>
+        <li>Item 0</li>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <hr>
+
+    <h3>Visibility Demo</h3>
+    <div class="hiddenDiv">Hidden Div</div>
+    <div style="visibility:hidden">Invisible but takes space</div>
+    <div>Visible Div</div>
+
+    <hr>
+
+    <textarea placeholder="Textarea"></textarea>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("p").css("color", "blue");
+            $("#title").css("color", "darkred");
+            $(".box").css("background", "#f2f2f2");
+            $("input[type='password']").css("border", "2px solid red");
+            $("input[type^='t']").css("background", "#e0f7fa");
+            $("#parent p").css("font-style", "italic");
+            $("#parent > p").css("color", "green");
+            $("li:first").css("font-weight", "bold");
+            $("li:last").css("color", "purple");
+            $("li:even").css("background", "#ddd");
+            $("li:odd").css("background", "#bbb");
+            $(":hidden").css("border", "2px dashed red");
+            $("input, textarea").css("border", "2px solid blue");
+
+        });
+    </script>
+</body>
+
+</html>

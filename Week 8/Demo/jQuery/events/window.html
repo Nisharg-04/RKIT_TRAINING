@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 2000px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+
+    <script>
+        $(window).on("load", function () {
+            alert("Window Loaded");
+        });
+
+        $(window).on("resize", function () {
+            console.log("Window Resized to: " + $(window).width() + "x" + $(window).height());
+        });
+
+        $(window).on("scroll", function () {
+            console.log("Window Scrolled");
+        });
+
+    </script>
+
+</body>
+
+</html>

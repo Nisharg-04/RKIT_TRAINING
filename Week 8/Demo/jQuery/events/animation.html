@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="start">Animate</button>
+    <button id="stop">Stop</button>
+
+    <div id="box"></div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $("#start").click(function () {
+            $("#box").animate({ marginLeft: "300px" }, 2000)
+                .delay(500)
+                .animate({ marginTop: "100px" }, 1000);
+        });
+
+        $("#stop").click(function () {
+            $("#box").stop();
+        });
+    </script>
+
+</body>
+
+</html>

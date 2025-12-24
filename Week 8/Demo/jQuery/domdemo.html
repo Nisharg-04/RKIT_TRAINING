@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            border: 2px solid black;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        .active {
+            background: green;
+            color: white;
+        }
+
+        .highlight {
+            border: 3px dashed orange;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box"><b>Hello</b> World</div>
+    <button id="htmlBtn">.html()</button>
+    <button id="textBtn">.text()</button>
+    <button id="cssBtn">.css()</button>
+    <button id="classBtn">Toggle Class</button>
+
+    <hr>
+    <input type="text" id="username" placeholder="Enter name">
+    <button id="valBtn">.val()</button>
+
+    <br><br>
+
+    <input type="checkbox" id="chk"> Accept Terms
+    <button id="propBtn">.prop()</button>
+
+    <hr>
+    <a id="link" href="https://example.com">Example Link</a>
+    <button id="attrBtn">.attr()</button>
+
+    <hr>
+
+    <input type="text" id="disabledInput" disabled value="Disabled input">
+    <button id="removeAttrBtn">removeAttr()</button>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#htmlBtn").click(function () {
+                let content = $("#box").html();
+                alert("HTML content: " + content);
+                $("#box").html("<i>Welcome</i>");
+            });
+            $("#textBtn").click(function () {
+                let txt = $("#box").text();
+                alert("Text content: " + txt);
+                $("#box").text("<b>Hello</b>");
+            });
+            $("#cssBtn").click(function () {
+                $("#box").css({
+                    color: "white",
+                    backgroundColor: "black",
+                    padding: "15px"
+                });
+            });
+            $("#classBtn").click(function () {
+                $("#box").toggleClass("active highlight");
+
+                if ($("#box").hasClass("active")) {
+                    console.log("Box is active");
+                }
+            });
+
+            $("#valBtn").click(function () {
+                let name = $("#username").val();
+                alert("Entered name: " + name);
+                $("#username").val("Nisharg");
+            });
+
+            $("#propBtn").click(function () {
+                alert("Checkbox checked: " + $("#chk").prop("checked"));
+                $("#chk").prop("checked", true);
+            });
+
+            $("#attrBtn").click(function () {
+                let link = $("#link").attr("href");
+                alert("Old href: " + link);
+
+                $("#link").attr("href", "https://google.com");
+            });
+            $("#removeAttrBtn").click(function () {
+                $("#disabledInput").removeAttr("disabled");
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>

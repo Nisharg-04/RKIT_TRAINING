@@ -14,6 +14,14 @@
         <p id="p2">Paragraph 2</p>
         <p id="p3">Paragraph 3</p>
     </div>
+    <div id="colorchangediv">
+        <button class="button">Change Color</button>
+        <button class="button">Change Color</button>
+        <button class="button">Change Color</button>
+        <button class="button">Change Color</button>
+        <button class="button">Change Color</button>
+        <button class="button">Change Color</button>
+    </div>
     <script>
         const container = document.getElementById('container');
         console.log(container.childNodes);
@@ -30,6 +38,29 @@
         console.log(p2.previousElementSibling);
         console.log(p2.nextSibling);
         console.log(p2.nextElementSibling);
+
+        const buttons = document.querySelectorAll('.button');
+        function change(button) {
+
+            const siblings = button.parentElement.childNodes;
+            button.style.backgroundColor = null;
+            const validSiblings = Array.from(siblings).filter(sib => sib.nodeType === 1 && sib !== button);
+            validSiblings.forEach(sib => {
+                sib.style.backgroundColor = getRandomColor();
+            });
+
+        }
+        buttons.forEach(button => {
+            button.addEventListener('click', (e) => change(e.target));
+        });
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
 
     </script>
 </body>

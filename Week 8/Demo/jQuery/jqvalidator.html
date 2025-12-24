@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+            margin-top: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="myForm">
+
+        <label>Username</label>
+        <input type="text" name="username">
+
+        <label>Email</label>
+        <input type="email" name="email">
+
+        <label>Password</label>
+        <input type="password" id="pass" name="password">
+
+        <label>Confirm Password</label>
+        <input type="password" name="confirm">
+
+        <label>Age</label>
+        <input type="number" name="age">
+
+        <button type="submit">Submit</button>
+
+    </form>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $.validator.addMethod("startsWithLetter", function (value) {
+                return /^[A-Za-z]/.test(value);
+            }, "Username must start with a letter");
+            $.validator.addMethod("minAge", function (value, element, age) {
+                return value >= age;
+            }, "Age must be 18 or above");
+
+            $("#myForm").validate({
+                rules: {
+                    username: {
+                        required: true,
+                        minlength: 3,
+                        startsWithLetter: true
+                    },
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    password: {
+                        required: true,
+                        minlength: 6
+                    },
+                    confirm: {
+                        equalTo: "#pass"
+                    },
+                    age: {
+                        required: true,
+                        minAge: 18
+                    }
+                },
+
+                messages: {
+                    username: {
+                        required: "Username is required",
+                        minlength: "Minimum 3 characters"
+                    },
+                    email: {
+                        required: "Email is required",
+                        email: "Enter valid email"
+                    },
+                    confirm: {
+                        equalTo: "Passwords do not match"
+                    }
+                },
+                submitHandler: function (form) {
+                    alert("Form is valid!");
+                    form.submit();
+                }
+
+            });
+        })
+    </script>
+
+</body>
+
+</html>

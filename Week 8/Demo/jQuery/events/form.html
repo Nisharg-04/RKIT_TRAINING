@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="myForm">
+        <input type="text" id="name" placeholder="Enter name">
+        <br><br>
+        <select id="city">
+            <option>Ahmedabad</option>
+            <option>Delhi</option>
+        </select>
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $("#name").focus(function () {
+            $(this).css("background", "lightyellow");
+        });
+
+        $("#name").blur(function () {
+            $(this).css("background", "white");
+        });
+
+        $("#city").change(function () {
+            alert("City changed");
+        });
+
+        $("#name").on("input", function () {
+            console.log("Typing...");
+        });
+
+        $("#myForm").submit(function (e) {
+            e.preventDefault();
+            alert("Form Submitted");
+        });
+    </script>
+
+</body>
+
+</html>

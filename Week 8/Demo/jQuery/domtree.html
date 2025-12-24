@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box" id="box">
+        Parent Box
+
+        <ul id="list">
+            <li class="item">Item 1</li>
+            <li class="item active">Item 2 (Active)</li>
+            <li class="item">Item 3</li>
+        </ul>
+
+        <div class="card">
+            <button class="btn">Click Me</button>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(".active").parent().css("border", "2px solid red");     // immediate parent
+        $(".active").parents(".box").css("background", "#f2f2f2"); // all ancestors
+        $("#list").children().css("color", "blue");               // direct children
+        $("#box").find("button").css("background", "orange");     // any depth
+        $(".active").siblings().css("opacity", "0.5");            // all siblings
+        $(".active").next().css("font-weight", "bold");           // next item
+        $(".active").prev().css("text-decoration", "underline"); // previous item
+        $(".btn").click(function () {
+            $(this).closest(".card").css("border", "2px dashed green");
+        });
+        $(".item").each(function (index, element) {
+            console.log(index, $(element).text());
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+        let arr = ["JS", "jQuery", "React"];
+        $.each(arr, function (index, value) {
+            console.log(index + ": " + value);
+        });
+
+        let user = { name: "Nisharg", age: 21 };
+        $.each(user, function (key, value) {
+            console.log(key + ": " + value);
+        });
+
+        let nums = [1, 2, 3];
+        let doubled = $.map(nums, function (num) {
+            return num * 2;
+        });
+        console.log("Doubled: " + doubled);
+
+        let name = "   Nisharg   ";
+        console.log("Trimmed:", $.trim(name));
+
+        let defaults = { theme: "light", show: true };
+        let options = { show: false };
+        let settings = $.extend(defaults, options);
+        console.log("Shallow extend:", settings);
+
+        let obj1 = { user: { name: "A" } };
+        let obj2 = { user: { age: 20 } };
+
+        let deepCopy = $.extend(true, {}, obj1, obj2);
+        console.log("Deep extend:", deepCopy);
+
+        console.log("$.type([]):", $.type([]));
+        console.log("$.type({}):", $.type({}));
+        console.log("$.type(null):", $.type(null));
+        console.log("$.type(function(){}):", $.type(function () { }));
+
+        let fruits = ["apple", "banana", "mango"];
+
+        console.log("Index of banana:", $.inArray("banana", fruits));
+        console.log("Index of grape:", $.inArray("grape", fruits));
+
+        console.log("Is array [1,2]?", $.isArray([1, 2]));
+        console.log("Is array {}?", $.isArray({}));
+
+        console.log("Is function?", $.isFunction(function () { }));
+        console.log("Is function 123?", $.isFunction(123));
+
+        let numbers = [1, 2, 3, 4, 5];
+        let even = $.grep(numbers, function (n) {
+            return n % 2 === 0;
+        });
+        console.log("Even numbers:", even);
+
+        // Invert filter (odd numbers)
+        let odd = $.grep(numbers, function (n) {
+            return n % 2 === 0;
+        }, true);
+
+        console.log("Odd numbers:", odd);
+
+        let a = [1, 2];
+        let b = [3, 4];
+
+        $.merge(a, b);
+        console.log("Merged array:", a);
+    </script>
+
+</body>
+
+</html>

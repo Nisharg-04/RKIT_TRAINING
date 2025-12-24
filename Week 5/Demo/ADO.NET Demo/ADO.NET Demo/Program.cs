@@ -9,7 +9,7 @@ namespace ADO.NET_Demo
         {
             string connectionString = "Server=localhost;Database=minipayrolldb;User ID=root;Password=****;";
 
-     
+
             using MySqlConnection conn = new MySqlConnection(connectionString);
 
             try
@@ -26,12 +26,12 @@ namespace ADO.NET_Demo
                         string name = reader.GetString("t01f02");
                         Console.WriteLine($"ID: {id}, Name: {name}");
                     }
-                    while (reader.Read())
-                    {
-                        int id = reader.GetInt32("t01f01");
-                        string name = reader.GetString("t01f02");
-                        Console.WriteLine($"ID: {id}, Name: {name}");
-                    }
+                    // while (reader.Read())
+                    // {
+                    //     int id = reader.GetInt32("t01f01");
+                    //     string name = reader.GetString("t01f02");
+                    //     Console.WriteLine($"ID: {id}, Name: {name}");
+                    // }
                 }
 
                 //Console.WriteLine("\nInserting new record");

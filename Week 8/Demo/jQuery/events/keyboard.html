@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="input" placeholder="Type here">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+        $("#input").keydown(function (e) {
+
+            console.log("Key Down " + e.key);
+        });
+
+        $("#input").keyup(function (e) {
+            console.log("Key Up " + e.key);
+        });
+    </script>
+</body>
+
+</html>

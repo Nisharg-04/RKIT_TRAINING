@@ -16,15 +16,17 @@
 
         function Dog() { }
         Dog.prototype = Object.create(Animal.prototype);
+
         Dog.prototype.bark = function () {
             console.log("Barking");
+        };
+        Dog.prototype.eat = function () {
+                console.log("dag ");
         };
 
         const d = new Dog();
         d.eat();
         d.bark();
-
-        console.log(d.__proto__ === Dog.prototype);
     </script>
 
 

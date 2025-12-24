@@ -30,7 +30,6 @@ namespace Secure_Notes_Vault
                 }
                 finally
                 {
-                   
                     passphrase = string.Empty;
                     GC.Collect();
                 }
@@ -198,7 +197,7 @@ namespace Secure_Notes_Vault
             }
         }
 
-        private static string GetPassphrase()
+         private static string GetPassphrase()
         {
             Console.Write("Enter your vault passphrase: ");
             StringBuilder sb = new StringBuilder();

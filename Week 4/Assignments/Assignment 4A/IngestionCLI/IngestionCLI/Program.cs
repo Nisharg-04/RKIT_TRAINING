@@ -28,9 +28,9 @@ namespace IngestionCLI
             //             .ToList()
             //             : new List<string>();
 
-            DirectoryInfo di = new DirectoryInfo(inputDir); 
-            var jsonFiles=di.Exists ? di.GetFiles("*.json", SearchOption.AllDirectories).Select(f => f.FullName) : Array.Empty<string>();
-            var csvFiles=di.Exists ? di.GetFiles("*.csv", SearchOption.AllDirectories).Select(f => f.FullName) : Array.Empty<string>();
+            DirectoryInfo di = new DirectoryInfo(inputDir);
+            var jsonFiles = di.Exists ? di.GetFiles("*.json", SearchOption.AllDirectories).Select(f => f.FullName) : Array.Empty<string>();
+            var csvFiles = di.Exists ? di.GetFiles("*.csv", SearchOption.AllDirectories).Select(f => f.FullName) : Array.Empty<string>();
             var files = jsonFiles.Concat(csvFiles).ToList();
 
             if (dryRun)
@@ -62,7 +62,7 @@ namespace IngestionCLI
                 }
                 catch (Exception ex)
                 {
-                   Console. WriteLine($"ERROR importing {f}: {ex.Message}");
+                    Console.WriteLine($"ERROR importing {f}: {ex.Message}");
                 }
 
             }
@@ -90,8 +90,8 @@ namespace IngestionCLI
                 {
                     TotalFilesProcessed = filesProcessed,
                     TotalBooks = allBooks.Count,
-                    ConditionCount = conditionCounts.ToDictionary<string,int>(),
-                    BookConditionCounts = conditionCounts.Select(kv => new SerializableKeyValue { Key=kv.Key,Value=kv.Value}).ToList(),
+                    ConditionCount = conditionCounts.ToDictionary<string, int>(),
+                    BookConditionCounts = conditionCounts.Select(kv => new SerializableKeyValue { Key = kv.Key, Value = kv.Value }).ToList(),
                     TopBooksBooks = topBooks.ToList()
                 };
                 var jsonPath = Path.Combine(outDir, $"summary_{DateTime.Now:yyyyMMdd_HHmmss}.json");

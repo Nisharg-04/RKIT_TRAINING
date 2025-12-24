@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            width: 150px;
+            height: 100px;
+            background: lightblue;
+            text-align: center;
+            line-height: 100px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="box">Hover / Click</div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+        $("#box").click(function () {
+            alert("Clicked");
+        });
+
+        $("#box").dblclick(function () {
+            alert("Double Clicked");
+        });
+
+        $("#box").mouseenter(function () {
+            $(this).css("background", "lightgreen");
+        });
+
+        $("#box").mouseleave(function () {
+            $(this).css("background", "lightblue");
+        });
+
+        $("#box").contextmenu(function () {
+            alert("Right Click");
+            return false; // prevent default menu
+        });
+    </script>
+</body>
+
+</html>
