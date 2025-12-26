@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        function asyncTask() {
+            let dfd = $.Deferred();
+
+            setTimeout(function () {
+                let success = true;
+
+                if (success) {
+                    dfd.resolve("Task completed");
+                } else {
+                    dfd.reject("Task failed");
+                }
+            }, 5000);
+
+            return dfd.promise();
+        }
+        asyncTask().done(function (msg) {
+            console.log("SUCCESS:", msg);
+        })
+            .fail(function (err) {
+                console.log("ERROR:", err);
+            })
+            .always(function () {
+                console.log("FINISHED");
+            });
+
+        function downloadFile() {
+            let dfd = $.Deferred();
+
+            let progress = 0;
+            let interval = setInterval(function () {
+                progress += 20;
+                dfd.notify(progress);
+
+                if (progress === 100) {
+                    clearInterval(interval);
+                    dfd.resolve("Download complete");
+                }
+            }, 500);
+
+            return dfd.promise();
+        }
+        downloadFile().progress(function (progress) {
+            console.log("Progress:", progress + "%");
+        })
+            .done(function (msg) {
+                console.log("SUCCESS:", msg);
+            })
+            .fail(function (err) {
+                console.log("ERROR:", err);
+            })
+            .always(function () {
+                console.log("FINISHED");
+            });
+    </script>
+
+</body>
+
+</html>

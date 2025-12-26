@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: #f4f6f8;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #taskInput {
+            padding: 8px;
+            width: 250px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        #addTask {
+            padding: 8px 14px;
+            margin-left: 5px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #addTask:hover {
+            background: #218838;
+        }
+
+        #loader {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        table {
+            margin-top: 20px;
+            width: 60%;
+            background: white;
+            border-collapse: collapse;
+        }
+
+        th {
+            background: #007bff;
+            color: white;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #ddd;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        tr:hover {
+            background: #f1f1f1;
+        }
+
+        .task-title {
+            cursor: pointer;
+        }
+
+        .completed {
+            text-decoration: line-through;
+            color: gray;
+        }
+
+        .deleteBtn {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .deleteBtn:hover {
+            background: darkred;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Task Manager</h2>
+    <div id="taskDiv">
+        <input type="text" id="taskInput" placeholder="Enter a task">
+        <button id="addTask">Add Task</button>
+    </div>
+
+    <p id="loader" style="display: none;">Loading...</p>
+    <table border="1" id="taskTable" style="margin-top:20px; width:50%;">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Task</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="taskList">
+        </tbody>
+    </table>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="main.js"> </script>
+</body>
+
+</html>

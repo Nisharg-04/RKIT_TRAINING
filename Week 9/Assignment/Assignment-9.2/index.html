@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: #f4f6f8;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        form {
+            width: 300px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            width: 95%;
+            padding: 8px;
+            margin-bottom: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px 16px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            margin-top: 15px;
+            border: 1px solid #ccc;
+            width: 300px;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>User Registration</h3>
+
+    <form id="userForm">
+        <label>Name:</label>
+        <input type="text" name="name"><br><br>
+
+        <label>Email:</label>
+        <input type="email" name="email"><br><br>
+
+        <label>Gender:</label><br>
+        <input type="radio" name="gender" value="Male"> Male
+        <input type="radio" name="gender" value="Female"> Female<br><br>
+
+        <label>Skills:</label><br>
+        <input type="checkbox" name="skills" value="JavaScript"> JavaScript
+        <input type="checkbox" name="skills" value="jQuery"> jQuery
+        <input type="checkbox" name="skills" value="React"> React<br><br>
+
+        <button type="submit">Save</button>
+    </form>
+    <h4>Serialized JSON Output:</h4>
+    <pre id="output"></pre>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>

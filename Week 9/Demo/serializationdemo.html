@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="myForm">
+        <input type="text" name="username" value="Nisharg">
+        <input type="email" name="email" value="nisharg@gmail.com">
+        <button type="submit">Submit</button>
+    </form>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#myForm").submit(function (event) {
+                event.preventDefault();
+                let data = $("#myForm").serialize();
+                console.log("Serialized Data:");
+                console.log(data);
+
+                let arr = $("#myForm").serializeArray();
+                console.log("Serialized Array:");
+                console.log(arr);
+
+                let user = {
+                    name: "Nisharg",
+                    age: 21
+                };
+
+                let jsonStr = JSON.stringify(user);
+                console.log("JSON String:" + jsonStr);
+
+                let preettyJson = JSON.stringify(user, null, 4);
+                console.log("Pretty JSON: " + preettyJson);
+
+                let preettyJson2 = JSON.stringify(user, null, "-------");
+                console.log("Pretty JSON with Tabs: " + preettyJson2);
+
+                let customJsonStr = JSON.stringify(user, ["name"], 4);
+                console.log("Custom JSON (only name): " + customJsonStr);
+
+                let parsedObj = JSON.parse(jsonStr);
+                console.log("Parsed Object:" + parsedObj.name + ", " + parsedObj.age);
+            });
+        });
+    </script>
+</body>
+
+</html>

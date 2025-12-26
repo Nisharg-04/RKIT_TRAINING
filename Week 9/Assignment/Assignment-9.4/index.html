@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: #f4f6f8;
+            padding: 40px;
+        }
+
+        #loadBtn {
+            padding: 12px 22px;
+            font-size: 16px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        #loadBtn:hover {
+            background: #0056b3;
+        }
+
+        #status {
+            margin-top: 15px;
+            font-weight: bold;
+            color: #333;
+        }
+
+   
+        #dashboard {
+            margin-top: 25px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 600px;
+        }
+
+        #dashboard h2 {
+            border-bottom: 2px solid #eee;
+            padding-bottom: 6px;
+            margin-bottom: 12px;
+            color: #222;
+        }
+
+        #dashboard ul {
+            padding-left: 20px;
+        }
+
+        #dashboard li {
+            margin-bottom: 6px;
+            color: #444;
+        }
+
+        .error {
+            color: red;
+            background: #ffe5e5;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="loadBtn">Load Dashboard</button>
+
+    <div id="status"></div>
+
+    <div id="dashboard"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>

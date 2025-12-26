@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button id="loadUsers">Load Users</button>
+    <p id="loader" style="display:none;">Loading...</p>
+    <div id="output"></div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#loadUsers').click(function () {
+                $.ajax({
+                    url: 'https://jsonplaceholder.typicode.com/users',
+                    method: 'GET',
+                    dataType: 'json',
+                    beforeSend: function () {
+                        $("#loader").show();
+                    },
+                    complete: function () {
+                        $("#loader").hide();
+                    },
+                    success: function (data) {
+                        let output = '<h2>User List</h2><ul>';
+                        data.forEach(function (user) {
+                            output += `<li>${user.name} (${user.email})</li>`;
+                        });
+                        output += '</ul>';
+                        $('#output').html(output);
+                    },
+                    error: function () {
+                        $('#output').html('<p>An error has occurred</p>');
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
