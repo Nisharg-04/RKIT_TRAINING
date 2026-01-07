@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery AJAX Events Demo</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        button { margin: 5px; padding: 6px 12px; }
+        #globalLoader, #localLoader {
+            display: none;
+            padding: 8px;
+            margin: 10px 0;
+            background: #333;
+            color: #fff;
+            width: fit-content;
+        }
+        .log {
+            border: 1px solid #ccc;
+            padding: 10px;
+            height: 200px;
+            overflow-y: auto;
+            background: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+
+<h1>AJAX Events – Complete Demo</h1>
+
+
+<div id="globalLoader">Global Loader...</div>
+
+<div id="localLoader">Local Loader...</div>
+
+<button id="btnSuccess">AJAX Success Request</button>
+<button id="btnError">AJAX Error Request</button>
+<button id="btnNoGlobal">AJAX Without Global Events</button>
+
+<h3>Event Log</h3>
+<div class="log" id="log"></div>
+
+<script>
+    function log(msg) {
+        $("#log").append(msg + "<br>");
+    }
+    $(document).ajaxStart(function () {
+        log("ajaxStart (GLOBAL)");
+        $("#globalLoader").show();
+    });
+
+    $(document).ajaxSend(function () {
+        log("ajaxSend (GLOBAL)");
+    });
+
+    $(document).ajaxComplete(function () {
+        log("ajaxComplete (GLOBAL)");
+    });
+
+    $(document).ajaxStop(function () {
+        log("ajaxStop (GLOBAL)");
+        $("#globalLoader").hide();
+    });
+
+
+    $("#btnSuccess").click(function () {
+        $.ajax({
+            url: "https://jsonplaceholder.typicode.com/posts/1",
+
+            beforeSend: function () {
+                log("beforeSend (REQUEST)");
+                $("#localLoader").show();
+            },
+
+            success: function (data) {
+                log("success (REQUEST)");
+                log("Title: " + data.title);
+            },
+
+            error: function () {
+                log("error (REQUEST)");
+            },
+
+            complete: function () {
+                log("complete (REQUEST)");
+                $("#localLoader").hide();
+            }
+        });
+    });
+
+
+    $("#btnError").click(function () {
+        $.ajax({
+            url: "https://jsonplaceholder.typicode.com/invalid-url",
+
+            beforeSend: function () {
+                log("beforeSend (ERROR REQUEST)");
+            },
+
+            success: function () {
+                log("success (ERROR REQUEST)");
+            },
+
+            error: function (xhr) {
+                log("error (ERROR REQUEST) - Status: " + xhr.status);
+            },
+
+            complete: function () {
+                log("complete (ERROR REQUEST)");
+            }
+        });
+    });
+
+
+    $("#btnNoGlobal").click(function () {
+        $.ajax({
+            url: "https://jsonplaceholder.typicode.com/posts/2",
+            global: false,   //  disables ajaxStart / ajaxStop
+
+            beforeSend: function () {
+                log("beforeSend (NO GLOBAL)");
+            },
+
+            success: function (data) {
+                log("success (NO GLOBAL) - " + data.title);
+            },
+
+            complete: function () {
+                log("complete (NO GLOBAL)");
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

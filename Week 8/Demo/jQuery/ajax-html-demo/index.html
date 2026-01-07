@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AJAX HTML Load Demo</title>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        button { margin: 5px; padding: 6px 12px; }
+        #loader {
+            display: none;
+            background: #333;
+            color: #fff;
+            padding: 6px 12px;
+            width: fit-content;
+            margin-top: 10px;
+        }
+        #content {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-top: 15px;
+            min-height: 100px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Load HTML using AJAX</h1>
+
+<button id="btnLoad1">Load Page 1</button>
+<button id="btnLoad2">Load Page 2</button>
+<button id="btnLoadPartial">Load Partial HTML</button>
+
+<div id="loader">Loading...</div>
+
+<div id="content">
+    Content will load here
+</div>
+
+<script>
+$(function () {
+
+   
+    $("#btnLoad1").click(function () {
+        loadHtml("page1.html");
+    });
+
+  
+    $("#btnLoad2").click(function () {
+        $("#content").load("page2.html")
+    });
+
+    $("#btnLoadPartial").click(function () {
+        $("#content").load("partial.html #section2");
+    });
+
+  
+    function loadHtml(url) {
+        $.ajax({
+            url: url,
+            dataType: "html",
+
+            beforeSend: function () {
+                $("#loader").show();
+            },
+
+            success: function (html) {
+                $("#content").html(html);
+            },
+
+            error: function () {
+                $("#content").html("<b>Error loading page</b>");
+            },
+
+            complete: function () {
+                $("#loader").hide();
+            }
+        });
+    }
+});
+</script>
+
+</body>
+</html>

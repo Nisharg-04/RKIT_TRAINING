@@ -23,6 +23,7 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script>
+        console.log($(".active").parents());
         $(".active").parent().css("border", "2px solid red");     // immediate parent
         $(".active").parents(".box").css("background", "#f2f2f2"); // all ancestors
         $("#list").children().css("color", "blue");               // direct children

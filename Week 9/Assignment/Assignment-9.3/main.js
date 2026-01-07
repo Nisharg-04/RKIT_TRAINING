@@ -76,7 +76,10 @@ $(document).ready(function () {
         $(this).toggleClass("completed");
     });
 
-
+    // DOES NOT WORKS BECAUSE IT THE .task-title ELEMENTS ARE ADDED DYNAMICALLY 
+    // $(".task-title").on("click", function () {
+    //     $(this).toggleClass("completed");
+    // })
 
 
     function addTaskRow(id, title, isCompleted) {

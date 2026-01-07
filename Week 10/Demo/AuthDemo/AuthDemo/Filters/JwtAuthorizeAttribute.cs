@@ -37,12 +37,18 @@ using Microsoft.IdentityModel.Tokens;
                     var principal = tokenHandler.ValidateToken(token,
                         new TokenValidationParameters
                         {
-                            ValidateIssuer = false,  
-                            ValidateAudience = false,
+                            ValidateIssuer = true,
+                            ValidIssuer = JwtConfig.Issuer,
+
+                            ValidateAudience = true,
+                            ValidAudience = JwtConfig.Audience,
+
                             ValidateLifetime = true,
                             ValidateIssuerSigningKey = true,
+
                             IssuerSigningKey = new SymmetricSecurityKey(key),
                             ClockSkew = TimeSpan.Zero
+
                         },
                         out _);
 

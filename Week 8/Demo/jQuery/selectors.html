@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Selectors Complete Demo</title>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        section { border: 1px solid #ccc; padding: 15px; margin-bottom: 20px; }
+        .box { padding: 5px; margin: 5px; border: 1px solid #aaa; }
+        .highlight { background: yellow; }
+        .red { color: red; }
+        .hidden { display: none; }
+        button { margin: 3px; }
+    </style>
+</head>
+<body>
+
+<h1>jQuery Selectors – Complete Demo</h1>
+
+<!-- ================= BASIC SELECTORS ================= -->
+<section>
+    <h2>1. Basic Selectors</h2>
+
+    <p id="p1">Paragraph with ID</p>
+    <p class="active">Paragraph with class</p>
+    <span>Span element</span>
+
+    <button id="btnBasic">Test Basic Selectors</button>
+</section>
+
+<!-- ================= HIERARCHY ================= -->
+<section>
+    <h2>2. Hierarchy Selectors</h2>
+
+    <div id="parentDiv">
+        <p>Child paragraph</p>
+        <div>
+            <p>Nested paragraph</p>
+        </div>
+    </div>
+
+    <h1>Heading</h1>
+    <p>Adjacent sibling</p>
+    <p>General sibling</p>
+
+    <button id="btnHierarchy">Test Hierarchy</button>
+</section>
+
+<!-- ================= SIBLINGS ================= -->
+<section>
+    <h2>3. Sibling Traversal</h2>
+
+    <ul>
+        <li>Item 1</li>
+        <li id="item">Item 2 (Selected)</li>
+        <li class="red">Item 3</li>
+        <li>Item 4</li>
+    </ul>
+
+    <button id="btnSiblings">Test Siblings</button>
+</section>
+
+<!-- ================= INDEX ================= -->
+<section>
+    <h2>4. Index / Position</h2>
+
+    <ul id="indexList">
+        <li>Index 0</li>
+        <li>Index 1</li>
+        <li>Index 2</li>
+        <li>Index 3</li>
+    </ul>
+
+    <button id="btnIndex">Test Index</button>
+</section>
+
+<!-- ================= CONTENT ================= -->
+<section>
+    <h2>5. Content-based</h2>
+
+    <p>Hello world</p>
+    <p>jQuery demo</p>
+    <div id="emptyDiv"></div>
+    <div>Parent <span>Child</span></div>
+
+    <button id="btnContent">Test Content</button>
+</section>
+
+<!-- ================= VISIBILITY ================= -->
+<section>
+    <h2>6. Visibility</h2>
+
+    <div>Visible Div</div>
+    <div class="hidden">Hidden Div</div>
+
+    <button id="btnVisibility">Test Visibility</button>
+</section>
+
+<!-- ================= FORM ================= -->
+<section>
+    <h2>7. Form / Input</h2>
+
+    <input type="text" value="Text input"><br>
+    <input type="password" value="secret"><br>
+    <input type="checkbox" checked> Checkbox<br>
+    <input type="radio" checked> Radio<br>
+    <input type="text" disabled value="Disabled"><br>
+
+    <select>
+        <option>One</option>
+        <option selected>Two</option>
+    </select>
+
+    <button id="btnForm">Test Form</button>
+</section>
+
+<!-- ================= ATTRIBUTE ================= -->
+<section>
+    <h2>8. Attribute Selectors</h2>
+
+    <input type="text" name="username">
+    <a href="https://example.com">Secure Link</a>
+    <img src="image.png" alt="img">
+
+    <button id="btnAttr">Test Attributes</button>
+</section>
+
+<!-- ================= FILTERING ================= -->
+<section>
+    <h2>9. Filtering</h2>
+
+    <ul id="filterList">
+        <li class="active">Active</li>
+        <li class="disabled">Disabled</li>
+        <li><span>Has Span</span></li>
+    </ul>
+
+    <button id="btnFilter">Test Filtering</button>
+</section>
+
+<!-- ================= TRAVERSAL ================= -->
+<section>
+    <h2>10. Traversal</h2>
+
+    <div class="outer">
+        <div class="inner">
+            <span id="child">Target</span>
+        </div>
+    </div>
+
+    <button id="btnTraversal">Test Traversal</button>
+</section>
+
+<!-- ================= EMPTY / EXISTS ================= -->
+<section>
+    <h2>11. Empty / Exists</h2>
+
+    <div id="checkEmpty"></div>
+    <div id="existsDiv">I exist</div>
+
+    <button id="btnEmpty">Test Empty</button>
+</section>
+
+<script>
+$(function () {
+
+    $("#btnBasic").click(function () {
+        $("*").removeClass("highlight");
+        $("#p1").addClass("highlight");
+        $(".active").addClass("highlight");
+        $("span").addClass("highlight");
+    });
+
+    $("#btnHierarchy").click(function () {
+        $("#parentDiv p").addClass("highlight");
+        $("h1 + p").addClass("highlight");
+        $("h1 ~ p").addClass("red");
+
+    });
+
+    $("#btnSiblings").click(function () {
+        $("#item").siblings().addClass("highlight");
+        $("#item").next().addClass("red");
+    });
+
+    $("#btnIndex").click(function () {
+        $("#indexList li:eq(1)").addClass("highlight");
+        $("#indexList li:even").addClass("red");
+    });
+
+    $("#btnContent").click(function () {
+        $("p:contains('Hello')").addClass("highlight");
+        $("div:empty").addClass("highlight");
+        $("div:parent").addClass("red");
+    });
+
+    $("#btnVisibility").click(function () {
+        $("div:visible").addClass("highlight");
+        $("div:hidden").show().addClass("red");
+    });
+
+    $("#btnForm").click(function () {
+        $(":input").addClass("highlight");
+        $(":checked").parent().addClass("red");
+        $(":disabled").addClass("red");
+    });
+
+    $("#btnAttr").click(function () {
+        $("input[name]").addClass("highlight");
+        $("a[href^='https']").addClass("red");
+        $("img[src$='.png']").addClass("highlight");
+    });
+
+    $("#btnFilter").click(function () {
+        $("#filterList li").filter(".active").addClass("highlight");
+        $("#filterList li").not(".disabled").addClass("red");
+        $("#filterList li").has("span").addClass("highlight");
+    });
+
+    $("#btnTraversal").click(function () {
+        $("#child").closest(".outer").addClass("highlight");
+    });
+
+    $("#btnEmpty").click(function () {
+        if ($("#existsDiv").length > 0) {
+            $("#existsDiv").addClass("highlight");
+        }
+
+        if ($("#checkEmpty").children().length === 0) {
+            $("#checkEmpty").text("Empty Div").addClass("red");
+        }
+    });
+
+});
+</script>
+
+</body>
+</html>

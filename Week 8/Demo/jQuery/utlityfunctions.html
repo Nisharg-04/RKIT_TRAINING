@@ -33,7 +33,8 @@
         let defaults = { theme: "light", show: true };
         let options = { show: false };
         let settings = $.extend(defaults, options);
-        console.log("Shallow extend:", settings);
+        console.log("Shallow Extend: (settings)", settings);
+        console.log("Shallow Extend (defaults)",defaults)
 
         let obj1 = { user: { name: "A" } };
         let obj2 = { user: { age: 20 } };

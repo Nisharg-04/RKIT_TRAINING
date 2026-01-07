@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+
+    <style>
+      
+
+      .container {
+        display: flex;
+        gap: 40px;
+        margin-top: 40px;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      #dragItem {
+        width: 120px;
+        height: 120px;
+        background: #4caf50;
+        color: white;
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: grab;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+      }
+
+      #dragItem.dragging {
+        background: #2e7d32;
+        opacity: 0.7;
+        cursor: grabbing;
+      }
+
+      .dropzone {
+        width: 220px;
+        height: 220px;
+        border: 3px dashed #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+        color: #333;
+      }
+
+      .dropzone.active {
+        border-color: #2196f3;
+        background: #e3f2fd;
+      }
+
+      .dropzone.dropped {
+        background: #c8e6c9;
+        border-color: #2e7d32;
+        color: #2e7d32;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div id="dragItem" draggable="true">Drag Me</div>
+      <div class="dropzone" id="dropZone">Drop Here</div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+      $(function () {
+    
+        $("#dragItem").on("dragstart", function () {
+          $(this).addClass("dragging");
+        });
+
+        $("#dragItem").on("dragend", function () {
+          $(this).removeClass("dragging");
+        });
+
+    
+        $("#dropZone").on("dragenter", function () {
+          $(this).addClass("active");
+        });
+
+        $("#dropZone").on("dragleave", function () {
+          $(this).removeClass("active");
+        });
+
+        $("#dropZone").on("dragover", function (e) {
+          e.preventDefault();
+        });
+
+        $("#dropZone").on("drop", function () {
+          $(this)
+            .removeClass("active")
+            .addClass("dropped")
+            .text("Dropped Successfully");
+        });
+      });
+    </script>
+  </body>
+</html>
