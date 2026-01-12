@@ -32,8 +32,10 @@
         console.log("includes('Demo'):", trimmed.includes("Demo"));
         console.log("startsWith('Java'):", trimmed.startsWith("Java"));
         console.log("endsWith('Demo'):", trimmed.endsWith("Demo"));
-
-
+        String.prototype.customSubstr = function (str){
+            return "demo";
+        }
+        console.log(trimmed.customSubstr());
         console.log("slice(0,10):", trimmed.slice(0, 10));
         console.log("substring(11,17):", trimmed.substring(11, 17));
 

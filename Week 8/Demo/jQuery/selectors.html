@@ -21,7 +21,7 @@
 
 <h1>jQuery Selectors – Complete Demo</h1>
 
-<!-- ================= BASIC SELECTORS ================= -->
+
 <section>
     <h2>1. Basic Selectors</h2>
 
@@ -32,7 +32,7 @@
     <button id="btnBasic">Test Basic Selectors</button>
 </section>
 
-<!-- ================= HIERARCHY ================= -->
+
 <section>
     <h2>2. Hierarchy Selectors</h2>
 
@@ -43,14 +43,15 @@
         </div>
     </div>
 
-    <h1>Heading</h1>
+    <p>Previous Siblings</p>
+    <h1 id="h1">Heading</h1>
     <p>Adjacent sibling</p>
     <p>General sibling</p>
 
     <button id="btnHierarchy">Test Hierarchy</button>
 </section>
 
-<!-- ================= SIBLINGS ================= -->
+
 <section>
     <h2>3. Sibling Traversal</h2>
 
@@ -64,7 +65,7 @@
     <button id="btnSiblings">Test Siblings</button>
 </section>
 
-<!-- ================= INDEX ================= -->
+
 <section>
     <h2>4. Index / Position</h2>
 
@@ -78,7 +79,6 @@
     <button id="btnIndex">Test Index</button>
 </section>
 
-<!-- ================= CONTENT ================= -->
 <section>
     <h2>5. Content-based</h2>
 
@@ -90,7 +90,7 @@
     <button id="btnContent">Test Content</button>
 </section>
 
-<!-- ================= VISIBILITY ================= -->
+
 <section>
     <h2>6. Visibility</h2>
 
@@ -100,7 +100,6 @@
     <button id="btnVisibility">Test Visibility</button>
 </section>
 
-<!-- ================= FORM ================= -->
 <section>
     <h2>7. Form / Input</h2>
 
@@ -118,7 +117,6 @@
     <button id="btnForm">Test Form</button>
 </section>
 
-<!-- ================= ATTRIBUTE ================= -->
 <section>
     <h2>8. Attribute Selectors</h2>
 
@@ -129,7 +127,7 @@
     <button id="btnAttr">Test Attributes</button>
 </section>
 
-<!-- ================= FILTERING ================= -->
+
 <section>
     <h2>9. Filtering</h2>
 
@@ -142,7 +140,7 @@
     <button id="btnFilter">Test Filtering</button>
 </section>
 
-<!-- ================= TRAVERSAL ================= -->
+
 <section>
     <h2>10. Traversal</h2>
 
@@ -155,7 +153,7 @@
     <button id="btnTraversal">Test Traversal</button>
 </section>
 
-<!-- ================= EMPTY / EXISTS ================= -->
+
 <section>
     <h2>11. Empty / Exists</h2>
 
@@ -176,9 +174,11 @@ $(function () {
     });
 
     $("#btnHierarchy").click(function () {
-        $("#parentDiv p").addClass("highlight");
+        $("#parentDiv  p").addClass("highlight");
+
         $("h1 + p").addClass("highlight");
-        $("h1 ~ p").addClass("red");
+        // $("h1").siblings().css("color","blue");
+        $("#h1 ~ p").addClass("red");
 
     });
 
@@ -194,7 +194,7 @@ $(function () {
 
     $("#btnContent").click(function () {
         $("p:contains('Hello')").addClass("highlight");
-        $("div:empty").addClass("highlight");
+        $("div:empty").html("<p>hello</p>")
         $("div:parent").addClass("red");
     });
 
