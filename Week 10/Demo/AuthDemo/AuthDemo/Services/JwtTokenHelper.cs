@@ -1,16 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
-namespace AuthDemo.Services
-{
-    using AuthDemo.App_Start;
+﻿using AuthDemo.App_Start;
     using AuthDemo.Models;
     using Microsoft.IdentityModel.Tokens;
     using System.IdentityModel.Tokens.Jwt;
     using System.Security.Claims;
     using System.Text;
+
+namespace AuthDemo.Services
+{
+   
 
     public static class JwtTokenHelper
     {

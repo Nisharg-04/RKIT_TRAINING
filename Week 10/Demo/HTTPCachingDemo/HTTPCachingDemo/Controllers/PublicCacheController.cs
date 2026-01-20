@@ -24,7 +24,7 @@ namespace HTTPCachingDemo.Controllers
             {
                 Message = "Public data",
                 Time = DateTime.UtcNow
-            };
+                };
 
             var response = Request.CreateResponse(HttpStatusCode.OK, data);
 
@@ -33,7 +33,6 @@ namespace HTTPCachingDemo.Controllers
                 Public = true,
                 MaxAge = TimeSpan.FromSeconds(30)
             };
-
             return ResponseMessage(response);
 
         }

@@ -13,9 +13,9 @@ namespace DependencyInjection
         public static void RegisterComponents()
         {
 			var container = new UnityContainer();
-
-            container.RegisterType<ILogger, ConsoleLogger>(
-              new ContainerControlledLifetimeManager());
+            container.RegisterSingleton<ILogger, ConsoleLogger>();
+            //container.RegisterType<ILogger, ConsoleLogger>(
+            //  new SingletonLifetimeManager());
 
             container.RegisterType<IOrderRepository, OrderRepository>(
                 new HierarchicalLifetimeManager());

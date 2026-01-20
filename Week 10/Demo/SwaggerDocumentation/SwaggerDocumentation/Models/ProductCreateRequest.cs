@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Web;
 
@@ -11,6 +12,8 @@ namespace SwaggerDocumentation.Models
     public class ProductCreateRequest
     {
         /// <summary>Product name</summary>
+
+      
         public string Name { get; set; }
 
         /// <summary>Product price</summary>

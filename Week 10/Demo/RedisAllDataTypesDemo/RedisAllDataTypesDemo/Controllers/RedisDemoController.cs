@@ -3,16 +3,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Web.Configuration;
 using System.Web.Http;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 using RedisAllDataTypesDemo.Models;
 using StackExchange.Redis;
 
 
 namespace RedisAllDataTypesDemo.Controllers
 {
+    
   
     public class RedisDemoController : ApiController
     {
+        public enum demoenum{
+            first =10,
+            second =20,
+            third =30
+        }
         private readonly IDatabase _db;
 
         public RedisDemoController()
@@ -30,6 +39,29 @@ namespace RedisAllDataTypesDemo.Controllers
             return Ok(value.ToString());
         }
 
+        
+        [HttpGet]
+        [Route("api/redis/string/json")]
+        public IHttpActionResult JsonString()
+        {
+            var user = new
+            {
+                Id = "22CP003",
+                Name = "Nisharg",
+                Rank = demoenum.first
+            };
+
+            var settings = new JsonSerializerSettings
+            {
+                Converters = new List<JsonConverter>
+    {
+        new StringEnumConverter()
+    }
+            };
+            _db.StringSet("user:1", JsonConvert.SerializeObject(user,settings));
+            var value = JsonConvert.DeserializeObject<dynamic>(_db.StringGet("user:1"));
+            return Ok(value);
+        }
         [HttpGet]
         [Route("api/redis/hash")]
         public IHttpActionResult HashDemo()

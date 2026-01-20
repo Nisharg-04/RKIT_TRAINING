@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Moment.js COMPLETE DEMO (Beginner → Advanced)
+// This file demonstrates most commonly used properties & methods of Moment.js
+// Run in browser (with moment.js loaded) or Node.js
+
+const moment = require("moment");
+
+console.log("================ BASIC CREATION ================");
+
+// Current date & time
+let now = moment();
+console.log("Now:", now.format());
+
+// From string
+let fromString = moment("2026-01-12");
+console.log("From String:", fromString.format("DD-MM-YYYY"));
+
+// From string with format (strict)
+let strictDate = moment("12-01-2026", "DD-MM-YYYY", true);
+console.log("Strict valid:", strictDate.isValid());
+
+// From Date object
+let fromDate = moment(new Date());
+console.log("From Date:", fromDate.format());
+
+// From timestamp
+let fromTimestamp = moment(1700000000000);
+console.log("From Timestamp:", fromTimestamp.format());
+
+// UTC
+let utcNow = moment.utc();
+console.log("UTC Now:", utcNow.format());
+
+console.log("\n================ FORMATTING ================");
+
+console.log(now.format("DD-MM-YYYY"));
+console.log(now.format("DD/MM/YYYY HH:mm:ss"));
+console.log(now.format("dddd, MMMM Do YYYY"));
+console.log(now.format("hh:mm A"));
+
+console.log("\n================ GETTERS ================");
+
+console.log("Year:", now.year());
+console.log("Month (0-based):", now.month());
+console.log("Date:", now.date());
+console.log("Day (0=Sun):", now.day());
+console.log("Hour:", now.hour());
+console.log("Minute:", now.minute());
+console.log("Second:", now.second());
+
+console.log("\n================ SETTERS ================");
+
+let setDemo = moment();
+setDemo.year(2030).month(5).date(15).hour(10).minute(30);
+console.log("After setting:", setDemo.format("DD-MM-YYYY HH:mm"));
+
+console.log("\n================ ADD / SUBTRACT ================");
+
+let addDemo = moment("2026-01-01");
+console.log("Original:", addDemo.format("DD-MM-YYYY"));
+console.log("Add 5 days:", addDemo.clone().add(5, "days").format("DD-MM-YYYY"));
+console.log("Add 2 months:", addDemo.clone().add(2, "months").format("DD-MM-YYYY"));
+console.log("Subtract 10 days:", addDemo.clone().subtract(10, "days").format("DD-MM-YYYY"));
+
+console.log("\n================ START / END OF ================");
+
+console.log("Start of day:", now.clone().startOf("day").format());
+console.log("End of month:", now.clone().endOf("month").format());
+
+console.log("\n================ COMPARISON ================");
+
+let a = moment("2026-01-01");
+let b = moment("2026-01-10");
+
+console.log("a before b:", a.isBefore(b));
+console.log("a after b:", a.isAfter(b));
+console.log("a same as b:", a.isSame(b));
+console.log("Same day?:", a.isSame(b, "day"));
+
+console.log("\n================ DIFFERENCE ================");
+
+console.log("Difference in days:", b.diff(a, "days"));
+console.log("Difference in hours:", b.diff(a, "hours"));
+
+console.log("\n================ RELATIVE TIME ================");
+
+console.log("From now (past):", moment().subtract(5, "days").fromNow());
+console.log("From now (future):", moment().add(3, "days").fromNow());
+console.log("Without suffix:", moment().subtract(5, "days").fromNow(true));
+
+console.log("\n================ DURATION ================");
+
+let duration = moment.duration(2, "hours");
+console.log("As minutes:", duration.asMinutes());
+console.log("As seconds:", duration.asSeconds());
+
+let diffDuration = moment.duration(b.diff(a));
+console.log("Diff duration days:", diffDuration.asDays());
+
+console.log("\n================ LOCALIZATION ================");
+
+moment.locale("fr");
+console.log("French:", moment().format("LLLL"));
+
+moment.locale("en");
+console.log("English:", moment().format("LLLL"));
+
+console.log("\n================ MUTABILITY ================");
+
+let mutable = moment("2026-01-01");
+mutable.add(1, "day");
+console.log("Mutated:", mutable.format("DD-MM-YYYY"));
+
+let original = moment("2026-01-01");
+let cloned = original.clone().add(1, "day");
+console.log("Original:", original.format("DD-MM-YYYY"));
+console.log("Cloned:", cloned.format("DD-MM-YYYY"));
+
+console.log("\n================ CONVERSIONS ================");
+
+console.log("To Date:", now.toDate());
+console.log("To ISO:", now.toISOString());
+console.log("To JSON:", now.toJSON());
+console.log("To String:", now.toString());
+
+console.log("\n================ UTILITIES ================");
+
+console.log("Is Moment:", moment.isMoment(now));
+console.log("Max:", moment.max(a, b).format("DD-MM-YYYY"));
+console.log("Min:", moment.min(a, b).format("DD-MM-YYYY"));
+
+console.log("\n================ END OF DEMO ================");
+
+    </script>
+    
+</body>
+</html>
