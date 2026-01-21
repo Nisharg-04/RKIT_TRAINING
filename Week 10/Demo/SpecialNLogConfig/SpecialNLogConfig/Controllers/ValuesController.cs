@@ -1,23 +1,25 @@
-﻿using System;
+﻿using SpecialNLogConfig.Special_Logging;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using System.Web.Http.Cors;
 
-namespace CORSDemo.Controllers
+namespace SpecialNLogConfig.Controllers
 {
-    [EnableCors(
-    origins: "http://127.0.0.1:5504",
-    headers: "*",
-    methods: "GET"
-)]
-    public class ProductController : ApiController
+    public class ValuesController : ApiController
     {
+        private readonly ISpecialLogger _specialLogger;
         // GET api/<controller>
+        public ValuesController(ISpecialLogger logger)
+        {
+            _specialLogger = logger;
+
+        }
         public IEnumerable<string> Get()
         {
+            _specialLogger.Audit("get req in special l0ogger");
             return new string[] { "value1", "value2" };
         }
 
@@ -28,9 +30,8 @@ namespace CORSDemo.Controllers
         }
 
         // POST api/<controller>
-        public void Post()
+        public void Post([FromBody] string value)
         {
-            
         }
 
         // PUT api/<controller>/5

@@ -2,21 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
-using System.Web.Http.Cors;
 
-namespace CORSDemo
+namespace SpecialNLogConfig
 {
     public static class WebApiConfig
     {
         public static void Register(HttpConfiguration config)
         {
-            //    var cors = new EnableCorsAttribute(
-            //        origins: "http://127.0.0.1:5501",
-            //        headers:"*",
-            //        methods:"*");
-            //    config.EnableCors(cors);
             // Web API configuration and services
-            config.EnableCors();
 
             // Web API routes
             config.MapHttpAttributeRoutes();
