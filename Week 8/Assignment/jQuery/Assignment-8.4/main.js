@@ -1,6 +1,12 @@
 $(document).ready(function () {
     $.validator.addMethod("passwordCheck", function (value, element) {
-        return value.test(/[A-Z]/) && value.test(/[0-9]/) && value.test(/[\@\#\$\%\^\&\*\(\)\_\+\!]/) && value.length >= 8;
+
+        // efficient methiods
+        // return value.test(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,}$/)
+        return  /[A-Z]/.test(value) &&        // at least one uppercase
+        /[0-9]/.test(value) &&        // at least one number
+        /[!@#$%^&*()_+]/.test(value) && // at least one special char
+        value.length >= 8;
     });
     $("#myForm").validate({
         rules: {

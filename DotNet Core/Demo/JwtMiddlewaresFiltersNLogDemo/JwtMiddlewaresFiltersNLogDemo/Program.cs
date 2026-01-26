@@ -1,4 +1,3 @@
-
 using JwtMiddlewaresFiltersNLogDemo.Filters;
 using JwtMiddlewaresFiltersNLogDemo.Middlewares;
 using Microsoft.AspNetCore.Authentication.JwtBearer;

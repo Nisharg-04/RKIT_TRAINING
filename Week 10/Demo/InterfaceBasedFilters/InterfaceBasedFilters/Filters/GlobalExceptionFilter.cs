@@ -21,12 +21,12 @@ namespace InterfaceBasedFilters.Filters
             Debug.WriteLine("global exception Filter Running");
 
             context.Response = context.Request.CreateResponse(
-             HttpStatusCode.InternalServerError,
-             new
-             {
-                 Message = "Unhandled exception",
-                 Error = context.Exception.Message
-             });
+                HttpStatusCode.InternalServerError,
+                new
+                {
+                    Message = "Unhandled exception",
+                    Error = context.Exception.Message
+                });
 
             return Task.CompletedTask;
         }

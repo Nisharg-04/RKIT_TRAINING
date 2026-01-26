@@ -10,7 +10,7 @@ namespace InterfaceBasedFilters
     {
         public static void Register(HttpConfiguration config)
         {
-            // Web API configuration and services
+            // add al the filters here to make it glolal 
             config.Filters.Add(new SimpleAuthenticationFilter());
             config.Filters.Add(new SimpleAuthorizationFilter());
             config.Filters.Add(new GlobalExceptionFilter());

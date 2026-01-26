@@ -83,7 +83,7 @@ namespace RegenerateTokenDemo.Controllers
                 if (token == null || token.ExpiresAt < DateTime.UtcNow)
                     return Unauthorized();
 
-                // ROTATION
+                // rotation of refresh token for secyrity reason
                 var newRefresh = RefreshTokenHelper.Generate();
                 var newHash = RefreshTokenHelper.Hash(newRefresh);
 

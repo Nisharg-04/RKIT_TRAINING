@@ -23,6 +23,7 @@ namespace InventoryMgt
         {
             var logger = LogManager.Setup().LoadConfigurationFromAppSettings().GetCurrentClassLogger();
             var builder = WebApplication.CreateBuilder(args);
+            //required for nlog
             builder.Logging.ClearProviders();
             builder.Host.UseNLog();
             // Add services to the container.

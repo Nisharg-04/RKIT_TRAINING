@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM Load Proof</title>
+
+  <script>
+    console.log("HEAD SCRIPT START");
+
+    const el = document.getElementById("content");
+    console.log("Element in head script:", el); 
+
+
+    for (let i = 0; i < 3; i++) {
+      console.log("Head loop:", i);
+
+
+      const start = Date.now();
+      while (Date.now() - start < 1000) {}
+    }
+
+    console.log("HEAD SCRIPT END");
+  </script>
+</head>
+
+<body>
+
+  <h1 id="content">BODY CONTENT LOADED</h1>
+
+  <script>
+    console.log("BODY SCRIPT START");
+
+    const el2 = document.getElementById("content");
+    console.log("Element in body script:", el2); 
+
+    console.log("BODY SCRIPT END");
+  </script>
+
+</body>
+</html>

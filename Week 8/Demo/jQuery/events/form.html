@@ -10,6 +10,7 @@
 <body>
     <form id="myForm">
         <input type="text" id="name" placeholder="Enter name">
+        <button class="btn">Click Me</button>
         <br><br>
         <select id="city">
             <option>Ahmedabad</option>
@@ -23,7 +24,9 @@
         $("#name").focus(function () {
             $(this).css("background", "lightyellow");
         });
-
+        $(".btn").click(function (e) {
+        $("name").focusout();
+        });
         $("#name").blur(function () {
             $(this).css("background", "white");
         });
@@ -40,6 +43,19 @@
             e.preventDefault();
             alert("Form Submitted");
         });
+
+// no bubbluing for focus and blur
+
+//         $("#myForm").on("focus", "input", function () {
+//     console.log("Focused");
+// });
+
+//         $("#myForm").on("blur", "input", function () {
+//     console.log("Blurred");
+// });
+
+
+
     </script>
 
 </body>

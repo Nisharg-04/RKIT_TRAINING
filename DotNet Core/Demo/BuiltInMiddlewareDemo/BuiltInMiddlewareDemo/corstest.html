@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CORS Test - Allowed</title>
+</head>
+<body>
+    <h1>CORS Test - Allowed Origin</h1>
+    <button id="fetchBtn">Fetch API</button>
+    <pre id="result"></pre>
+
+    <script>
+        document.getElementById('fetchBtn').addEventListener('click', async () => {
+            try {
+                const response = await fetch('http://localhost:5029/api/demo/public');
+                const data = await response.json();
+               console.log(data);
+                document.getElementById('result').textContent = JSON.stringify(data, null, 2);
+            } catch (err) {
+                document.getElementById('result').textContent = "Error: " + err;
+            }
+        });
+    </script>
+</body>
+</html>

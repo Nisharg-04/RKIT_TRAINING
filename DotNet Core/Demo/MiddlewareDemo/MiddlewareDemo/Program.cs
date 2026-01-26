@@ -19,7 +19,7 @@ namespace MiddlewareDemo
                 Console.WriteLine("INLINE MIDDLEWARE: After Controller");
             });
             app.UseMiddleware<ShortCircuitMiddleware>();
-         
+            
             app.UseMiddleware<RequestLoggingMiddleware>();
 
             // Configure the HTTP request pipeline.

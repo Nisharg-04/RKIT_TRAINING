@@ -50,6 +50,11 @@
     <div class="hiddenDiv">Hidden Div</div>
     <div style="visibility:hidden">Invisible but takes space</div>
     <div>Visible Div</div>
+    <a href="www.google.com">google</a>
+    <a href="www.google.cloud.in">cloud</a>
+    <a href="www.google.gmail.co">gmail</a>
+    <a href="www.google.maps.com">maps</a>
+
 
     <hr>
 
@@ -61,7 +66,16 @@
             $("#title").css("color", "darkred");
             $(".box").css("background", "#f2f2f2");
             $("input[type='password']").css("border", "2px solid red");
-            $("input[type^='t']").css("background", "#e0f7fa");
+            $("a[href^='www']").css({
+                "background": "teal",
+                "text-decoration": "none",  
+                "color": "white"  
+            });
+            $("a[href$='com']").css({
+                "background": "purple",
+                "text-decoration": "none",  
+                "color": "white"  
+            });
             $("#parent p").css("font-style", "italic");
             $("#parent > p").css("color", "green");
             $("li:first").css("font-weight", "bold");
