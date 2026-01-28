@@ -1,0 +1,36 @@
+# escape=`
+
+# STAGE 1: THE BUILDER (The Factory)
+# We use the heavy SDK image (4.8) to compile the code
+FROM mcr.microsoft.com/dotnet/framework/sdk:4.8 AS build
+
+# Set the shell to PowerShell for better command handling
+SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]
+
+WORKDIR /src
+
+# 1. OPTIMIZATION: Copy only .csproj first to cache NuGet packages
+# Replace 'MyProject' with your actual folder name
+COPY ["MyProject/MyProject.csproj", "MyProject/"]
+RUN dotnet restore "MyProject/MyProject.csproj"
+
+# 2. Copy the rest of the source code
+COPY . .
+
+# 3. Build and Publish
+WORKDIR "/src/MyProject"
+# We publish to a folder named 'publish' inside the container
+RUN dotnet publish "MyProject.csproj" -c Release -o /app/publish
+
+
+# STAGE 2: THE RUNTIME (The Production Environment)
+# We use the lighter ASP.NET image (contains IIS)
+FROM mcr.microsoft.com/dotnet/framework/aspnet:4.8 AS runtime
+
+# Set the working directory to IIS default root
+WORKDIR /inetpub/wwwroot
+
+# Copy the compiled files from the 'build' stage
+COPY --from=build /app/publish .
+
+# No ENTRYPOINT needed. This image automatically starts IIS (w3wp.exe)

@@ -101,11 +101,11 @@ namespace InventoryMgt
             app.UseMiddleware<ExceptionMiddleware>();
             app.UseMiddleware<RequestLoggingMiddleware>();
             // Configure the HTTP request pipeline.
-            if (app.Environment.IsDevelopment())
-            {
+           
+           
                 app.UseSwagger();
                 app.UseSwaggerUI();
-            }
+           
 
             app.UseHttpsRedirection();
 
