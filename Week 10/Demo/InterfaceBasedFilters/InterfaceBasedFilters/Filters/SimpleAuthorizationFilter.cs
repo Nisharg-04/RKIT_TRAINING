@@ -27,15 +27,11 @@ namespace InterfaceBasedFilters.Filters
 
             if (user == null || !user.Identity.IsAuthenticated)
             {
-                // STOP PIPELINE
-                return Task.FromResult(
-                    actionContext.Request.CreateResponse(
-                        HttpStatusCode.Unauthorized,
-                        "User not authorized"
-                    ));
+           
+                return UnauthorizedResponse();
             }
 
-            // CONTINUE PIPELINE
+       
             return continuation();
         }
     }

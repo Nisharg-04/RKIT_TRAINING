@@ -28,6 +28,18 @@ namespace LoggingDemo.Services
                     order.OrderId,
                     order.Amount);
 
+                _logger.LogTrace("This is TRACE log - very detailed debugging");
+
+                _logger.LogDebug("This is DEBUG log - debugging variable values");
+
+                _logger.LogInformation("This is INFO log - normal app flow");
+
+                _logger.LogWarning("This is WARNING log - something unusual happened");
+                _logger.LogCritical("This is CRITICAL log - system level failure");
+
+
+
+
                 if (order.Amount > 10000)
                 {
                     _logger.LogWarning(

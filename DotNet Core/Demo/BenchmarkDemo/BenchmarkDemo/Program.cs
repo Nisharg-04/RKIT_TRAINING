@@ -20,7 +20,7 @@ public class TestBench
         return sum;
     }
 
-    private long result; // store benchmark result
+    private long result; 
 
     [Benchmark]
     public void LinqSum()

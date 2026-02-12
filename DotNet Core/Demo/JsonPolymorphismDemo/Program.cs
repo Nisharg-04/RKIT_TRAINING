@@ -12,12 +12,11 @@ class Program
             new Cat { Name = "Whiskers", LikesMilk = true }
         };
 
-        // Serialize using source generator
+
         string json = JsonSerializer.Serialize(animals);
         Console.WriteLine("Serialized JSON:");
         Console.WriteLine(json);
 
-        // Deserialize
         var deserialized = JsonSerializer.Deserialize<List<Animal>>(json);
         Console.WriteLine("\nDeserialized objects:");
         foreach (var a in deserialized)
