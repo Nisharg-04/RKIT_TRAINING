@@ -1,7 +1,14 @@
 ﻿ docker network create my-network
  docker volume create my-volume
 
- docker run -d --name mysql-db --network my-network -v my-volume:/var/lib/mysql -v ${PWD}/mysqldump.sql:/docker-entrypoint-initdb.d/init.sql -e MYSQL_ROOT_PASSWORD=rootpassword123 mysql:8.0
+docker run -d `
+>>   --name mysql-db `
+>>   --network my-network `
+>>   -v my-volume:/var/lib/mysql `
+>>   -v ${PWD}/mysqldump.sql:/docker-entrypoint-initdb.d/init.sql `
+>>   -e MYSQL_ROOT_PASSWORD=rootpassword123 `
+>>   mysql:8.0
+
 change in app settings
 "ConnectionStrings": {
 	"DefaultConnection": "Server=mysql-db;Database=inventorydb;User=root;Password=rootpassword123;"

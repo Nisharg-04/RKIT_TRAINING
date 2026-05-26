@@ -40,9 +40,8 @@ namespace BuiltInMiddlewareDemo
                 });
             });
 
-           
             builder.Services.AddRateLimiter(options =>
-            {
+            {   
                 options.AddFixedWindowLimiter("fixed", opt =>
                 {
                     opt.Window = TimeSpan.FromSeconds(10);
@@ -96,8 +95,7 @@ namespace BuiltInMiddlewareDemo
             app.UseRateLimiter();
 
             // Endpoint mapping
-            app.MapControllers()
-               .RequireRateLimiting("fixed");
+            app.MapControllers().RequireRateLimiting("fixed");
 
             // Terminal
             app.Run();

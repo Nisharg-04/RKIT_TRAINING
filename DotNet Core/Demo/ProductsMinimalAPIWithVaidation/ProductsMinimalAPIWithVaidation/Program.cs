@@ -22,11 +22,10 @@ namespace ProductsMinimalAPIWithVaidation
 
             var app = builder.Build();
             // Configure the HTTP request pipeline.
-            if (app.Environment.IsDevelopment())
-            {
+            
                 app.UseSwagger();
                 app.UseSwaggerUI();
-            }
+            
             app.MapGet("api/products", () => {
                 return Results.Ok(ProductService.GetAllProducts());
             }).AddEndpointFilter<LoggingFilter>(); 

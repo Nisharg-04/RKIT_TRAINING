@@ -23,17 +23,7 @@ namespace InventoryMgt
         {
             var logger = LogManager.Setup().LoadConfigurationFromAppSettings().GetCurrentClassLogger();
             var builder = WebApplication.CreateBuilder(args);
-            builder.Services.AddCors(options =>
-            {
-                options.AddPolicy("MyCorsPolicy", policy =>
-                {
-                    policy
-                        .AllowAnyOrigin()
-                        .AllowAnyMethod()
-                        .AllowAnyHeader();
-                });
-            });
-                //required for nlog
+            //required for nlog
             builder.Logging.ClearProviders();
             builder.Host.UseNLog();
             // Add services to the container.
@@ -112,7 +102,7 @@ namespace InventoryMgt
             app.UseMiddleware<RequestLoggingMiddleware>();
             // Configure the HTTP request pipeline.
            
-           app.UseCors("MyCorsPolicy");
+           
                 app.UseSwagger();
                 app.UseSwaggerUI();
            
